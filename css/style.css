@@ -1,5 +1,95 @@
-div {
-    color: blue;
-    font-size: 14px;
-    background-color: burlywood;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {}
+
+.contaner {
+    width: auto;
+    height: auto;
+}
+
+.header_item {
+    margin: 15px 50px 15px 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+
+.header_logo {}
+
+.header_menu {
+    display: inline-flex;
+    justify-content: center;
+    color: black;
+}
+
+.header_menu a {
+    color: black;
+    padding: 15px;
+}
+
+.header_menu span {
+    padding: 10px;
+}
+
+.btn button {
+    border: none;
+    background: #5B6460;
+    color: #fff;
+    height: 60px;
+    width: 200px;
+}
+
+.title {
+    height: auto;
+    width: auto;
+}
+
+.title_fon {
+    position: relative;
+}
+
+.title_item {
+    color: #fff;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    background-color: khaki;
+}
+
+.cabins {}
+
+.cabins_items {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0px;
+}
+
+.text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 120px;
+}
+
+.images {}
+
+.grid-img {
+    margin: 100px 0px;
+}
+
+.grid-img_item {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
 }
