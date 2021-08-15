@@ -243,3 +243,50 @@ body {
 .btn--long {
     width: 287px;
 }
+
+// =============================секция со Steps 
+.steps {
+    margin-top: 100px;
+}
+
+.steps__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+    background: url(../img/steps/bg.svg) no-repeat top;
+}
+
+.step__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.step__icon {
+    margin-bottom: 12px;
+}
+
+.position--item {
+    margin-top: 70px;
+}
+
+.step__desc {
+    text-align: center;
+    width: 214px;
+    margin-bottom: 65px;
+    .step__title {
+        font-family: "GilroyBold";
+        font-size: 18px;
+        line-height: 28px;
+        color: #1d2530;
+        margin: 2px 0;
+    }
+    .step__text {
+        font-family: "GilroyRegular";
+        font-size: 16px;
+        line-height: 26px;
+        color: #1d2530;
+        margin: 2px 0;
+    }
+}
