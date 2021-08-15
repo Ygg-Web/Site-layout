@@ -28,12 +28,9 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    .logo-item {
-        position: absolute;
+    .logo__icon {
         width: 55px;
         height: 39.63px;
-        left: 0;
-        top: 0;
     }
     .logo__title {
         font-family: 'GilroyBold';
@@ -288,5 +285,75 @@ body {
         line-height: 26px;
         color: #1d2530;
         margin: 2px 0;
+    }
+}
+
+// ============================Footer
+.footer {
+    margin-top: 100px;
+    background: #1d2530;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 111px;
+}
+
+.logo--footer {
+    margin-right: 455px;
+    width: 90px;
+    flex-direction: column;
+    align-items: flex-start;
+    .logo__icon {
+        width: 81px;
+        height: 59px;
+    }
+    .logo__title {
+        font-family: "GilroyBold";
+        font-size: 32px;
+        line-height: 24px;
+        color: #fff;
+        margin-top: 10px;
+    }
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.link__items {
+    font-family: "GilroyMedium";
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    width: 160px;
+    margin-right: 150px;
+}
+
+.nav__footer {
+    display: flex;
+    flex-direction: column;
+    .link__item {
+        font-family: "GilroyRegular";
+        font-size: 16px;
+        line-height: 26px;
+        color: #fff;
+        text-decoration: none;
+        margin: 6px 0;
+    }
+}
+
+.footer__end {
+    height: 72px;
+    background: #141b23;
+    font-family: "GilroyRegular";
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    p {
+        height: 24px;
+        padding: 24px 0;
     }
 }
