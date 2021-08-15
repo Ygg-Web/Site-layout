@@ -179,4 +179,67 @@ body {
 }
 
 // =========================Секция с Tarif
-sadsadsa asdasd sad
+.tarif {
+    margin-top: 130px;
+}
+
+.tarif__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title__desc {
+        font-family: "GilroyBlack";
+        font-size: 39px;
+        line-height: 30px;
+        color: #1d2530;
+    }
+    .title__text {
+        font-family: "GilroyBold";
+        font-size: 24px;
+        line-height: 32px;
+        color: #1d2530;
+    }
+}
+
+.tarifs {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 30px;
+}
+
+.tarif__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 33px;
+    .tarif__type {
+        font-family: "GilroyBlack";
+        font-size: 24px;
+        line-height: 48px;
+        color: #685ed6;
+    }
+    .tarif__desc {
+        font-family: "GilroyBold";
+        font-size: 28px;
+        line-height: 40px;
+        color: #1d2530;
+        width: 255px;
+        text-align: center;
+    }
+    .tarif__price {
+        font-family: "GilroyMedium";
+        font-size: 20px;
+        line-height: 30px;
+        color: #1d2530;
+        margin-bottom: 50px;
+    }
+}
+
+.btn--long {
+    width: 287px;
+}
