@@ -116,12 +116,17 @@ body {
     vertical-align: top;
     padding: 12px 32px;
     color: #fff;
-    width: 168px;
-    height: 48px;
     border-radius: 6px;
     background-color: #685ed6;
     text-decoration: none;
     transition: background-color .2s linear;
+    &--small {
+        width: 168px;
+        height: 48px;
+    }
+    &--long {
+        width: 287px;
+    }
     &:hover {
         background-color: #c0d8fb;
         color: #685ed6;
@@ -240,10 +245,6 @@ body {
         color: #1d2530;
         margin-bottom: 50px;
     }
-}
-
-.btn--long {
-    width: 287px;
 }
 
 // =============================секция со Steps 

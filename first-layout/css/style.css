@@ -177,13 +177,20 @@ body {
   vertical-align: top;
   padding: 12px 32px;
   color: #fff;
-  width: 168px;
-  height: 48px;
   border-radius: 6px;
   background-color: #685ed6;
   text-decoration: none;
   -webkit-transition: background-color .2s linear;
   transition: background-color .2s linear;
+}
+
+.btn--small {
+  width: 168px;
+  height: 48px;
+}
+
+.btn--long {
+  width: 287px;
 }
 
 .btn:hover {
@@ -344,10 +351,6 @@ body {
   line-height: 30px;
   color: #1d2530;
   margin-bottom: 50px;
-}
-
-.btn--long {
-  width: 287px;
 }
 
 .steps {
