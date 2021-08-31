@@ -51,23 +51,24 @@ body {
 
 .nav {
     font-size: 20px;
-    line-height: 26px;
+    line-height: 24px;
+    color: #1d2530;
     .nav__item {
         display: inline-block;
         vertical-align: top;
-        margin: 0 30px;
+        margin: 0 12px;
         text-decoration: none;
-        border: 6px solid transparent;
-        transition: color .3s linear;
+        letter-spacing: .1em;
+        transition: text-shadow .3s;
         &:hover {
             color: #685ed6;
-            border: 4px solid transparent;
             font-weight: bold;
+            margin: 0 7px;
         }
     }
 }
 
-// ==============================Секция с Wrap
+// ==============================Секция 1
 .wrap {
     padding-top: 125px;
     width: 100%;
@@ -82,14 +83,14 @@ body {
     display: flex;
     flex-direction: column;
     width: 480px;
-    margin: 0;
 }
 
 .slogan__title {
+    display: inline-block;
     width: 398px;
     height: 120px;
     font-family: 'GilroyBlack';
-    font-size: 35px;
+    font-size: 52px;
     line-height: 55px;
     color: #685ed6;
     margin-bottom: 30px;
@@ -105,6 +106,7 @@ body {
     color: #1d2530;
     span {
         color: #685ed6;
+        font-family: 'GilroyBlack';
     }
 }
 
@@ -133,9 +135,10 @@ body {
     }
 }
 
-// ====================================Секция с desc
+// ====================================Секция 2
 .desc {
-    margin-top: 96px;
+    padding-top: 96px;
+    width: 100%;
 }
 
 .desc__inner {
@@ -155,6 +158,8 @@ body {
 .item__definition {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .item__text {
@@ -162,11 +167,11 @@ body {
     flex-direction: column;
     width: 428px;
     margin-left: 27.95px;
-    padding-bottom: 49px;
 }
 
 .item__title {
-    margin: 0;
+    padding: 2px 0;
+    margin: 2px 0;
     font-family: "GilroySemiBold";
     font-size: 24px;
     line-height: 32px;
@@ -177,15 +182,15 @@ body {
 .item__subtitle {
     margin: 0;
     font-family: "GilroyRegular";
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 32px;
 }
 
 .ilustrion__definition {
     padding-right: 100px;
 }
 
-// =========================Секция с Tarif
+// =========================Секция 3
 .tarif {
     margin-top: 130px;
 }
@@ -247,7 +252,7 @@ body {
     }
 }
 
-// =============================секция со Steps 
+// =============================Секция 4
 .steps {
     margin-top: 100px;
 }
