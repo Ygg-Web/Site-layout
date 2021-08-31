@@ -14,6 +14,7 @@ h2 {
 
 body {
     font-family: 'GilroyRegular' sans-serif;
+    line-height: 32px;
     color: #1d2530;
 }
 
@@ -44,22 +45,18 @@ body {
     }
     .logo__title {
         font-family: 'GilroyBold';
-        font-size: 28.11px;
-        line-height: 21.08px;
+        font-size: 32px;
     }
 }
 
 .nav {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 22px;
     color: #1d2530;
     .nav__item {
         display: inline-block;
         vertical-align: top;
-        margin: 0 12px;
+        margin: 0 18px;
         text-decoration: none;
-        letter-spacing: .1em;
-        transition: text-shadow .3s;
         &:hover {
             color: #685ed6;
             font-weight: bold;
@@ -149,7 +146,6 @@ body {
 .definition__title {
     font-family: 'GilroyBlack';
     font-size: 25px;
-    line-height: 30px;
     width: 530px;
     color: #1d2530;
     margin-bottom: 68px;
@@ -174,8 +170,6 @@ body {
     margin: 2px 0;
     font-family: "GilroySemiBold";
     font-size: 24px;
-    line-height: 32px;
-    font-weight: 600;
     color: #1d2530;
 }
 
@@ -183,7 +177,6 @@ body {
     margin: 0;
     font-family: "GilroyRegular";
     font-size: 20px;
-    line-height: 32px;
 }
 
 .ilustrion__definition {
@@ -192,7 +185,8 @@ body {
 
 // =========================Секция 3
 .tarif {
-    margin-top: 130px;
+    padding-top: 130px;
+    width: 100%;
 }
 
 .tarif__inner {
@@ -207,13 +201,11 @@ body {
     .title__desc {
         font-family: "GilroyBlack";
         font-size: 39px;
-        line-height: 30px;
         color: #1d2530;
     }
     .title__text {
         font-family: "GilroyBold";
         font-size: 24px;
-        line-height: 32px;
         color: #1d2530;
     }
 }
@@ -232,13 +224,11 @@ body {
     .tarif__type {
         font-family: "GilroyBlack";
         font-size: 24px;
-        line-height: 48px;
         color: #685ed6;
     }
     .tarif__desc {
         font-family: "GilroyBold";
         font-size: 28px;
-        line-height: 40px;
         color: #1d2530;
         width: 255px;
         text-align: center;
@@ -246,7 +236,6 @@ body {
     .tarif__price {
         font-family: "GilroyMedium";
         font-size: 20px;
-        line-height: 30px;
         color: #1d2530;
         margin-bottom: 50px;
     }
@@ -254,7 +243,8 @@ body {
 
 // =============================Секция 4
 .steps {
-    margin-top: 100px;
+    padding-top: 100px;
+    width: 100%;
 }
 
 .steps__items {
@@ -281,19 +271,17 @@ body {
 
 .step__desc {
     text-align: center;
-    width: 214px;
+    width: 270px;
     margin-bottom: 65px;
     .step__title {
         font-family: "GilroyBold";
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 24px;
         color: #1d2530;
         margin: 2px 0;
     }
     .step__text {
         font-family: "GilroyRegular";
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 20px;
         color: #1d2530;
         margin: 2px 0;
     }
@@ -303,12 +291,13 @@ body {
 .footer {
     margin-top: 100px;
     background: #1d2530;
+    width: 100%;
 }
 
 .footer__inner {
     display: flex;
     justify-content: space-around;
-    padding-top: 111px;
+    padding-top: 50px;
 }
 
 .logo--footer {
@@ -323,7 +312,6 @@ body {
     .logo__title {
         font-family: "GilroyBold";
         font-size: 32px;
-        line-height: 24px;
         color: #fff;
         margin-top: 10px;
     }
@@ -337,7 +325,6 @@ body {
 .link__items {
     font-family: "GilroyMedium";
     font-size: 20px;
-    line-height: 30px;
     color: #fff;
     width: 160px;
     margin-right: 150px;
@@ -349,10 +336,13 @@ body {
     .link__item {
         font-family: "GilroyRegular";
         font-size: 16px;
-        line-height: 26px;
         color: #fff;
         text-decoration: none;
         margin: 6px 0;
+        transition: color .2s linear;
+        &:hover {
+            font-family: "GilroyBold";
+        }
     }
 }
 
@@ -361,7 +351,6 @@ body {
     background: #141b23;
     font-family: "GilroyRegular";
     font-size: 14px;
-    line-height: 24px;
     color: #fff;
     p {
         height: 24px;
