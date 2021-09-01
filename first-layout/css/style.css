@@ -33,7 +33,12 @@
   font-weight: normal;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -395,15 +400,92 @@ body {
 .step__desc .step__title {
   font-family: "GilroyBold";
   font-size: 24px;
-  color: #1d2530;
   margin: 2px 0;
 }
 
 .step__desc .step__text {
   font-family: "GilroyRegular";
   font-size: 20px;
-  color: #1d2530;
   margin: 2px 0;
+}
+
+.clients {
+  padding-top: 100px;
+  width: 100%;
+}
+
+.comments {
+  margin: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.comment__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment__wrap {
+  width: 540px;
+  height: 220px;
+  text-align: center;
+}
+
+.comment__wrap .comment__title {
+  font-family: "GilroyBold";
+  font-size: 24px;
+}
+
+.comment__wrap .comment__text {
+  font-family: "GilroyRegular";
+  font-size: 16px;
+}
+
+.client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6px 0;
+}
+
+.client__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 16px;
+}
+
+.client__info .client__name {
+  font-family: "GilroyBold";
+  font-size: 24px;
+}
+
+.client__info .client__email {
+  font-family: "GilroyRegular";
+  font-size: 16px;
+  margin: 0;
 }
 
 .footer {

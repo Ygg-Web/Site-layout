@@ -1,5 +1,10 @@
 @import "./fonts/fonts.scss";
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
@@ -276,14 +281,68 @@ body {
     .step__title {
         font-family: "GilroyBold";
         font-size: 24px;
-        color: #1d2530;
         margin: 2px 0;
     }
     .step__text {
         font-family: "GilroyRegular";
         font-size: 20px;
-        color: #1d2530;
         margin: 2px 0;
+    }
+}
+
+// ============================Clients
+.clients {
+    padding-top: 100px;
+    width: 100%;
+}
+
+.clients__inner {}
+
+.comments {
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.comment__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment__wrap {
+    width: 540px;
+    height: 220px;
+    text-align: center;
+    .comment__title {
+        font-family: "GilroyBold";
+        font-size: 24px;
+    }
+    .comment__text {
+        font-family: "GilroyRegular";
+        font-size: 16px;
+    }
+}
+
+.client {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 6px 0;
+}
+
+.client__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    .client__name {
+        font-family: "GilroyBold";
+        font-size: 24px;
+    }
+    .client__email {
+        font-family: "GilroyRegular";
+        font-size: 16px;
+        margin: 0;
     }
 }
 
