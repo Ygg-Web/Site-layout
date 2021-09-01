@@ -357,11 +357,18 @@ body {
     background: linear-gradient(25deg, #685ed6 56%, #6c6ee7 55%);
     border-radius: 6px;
     height: 288px;
+    position: relative;
+    >img {
+        position: absolute;
+        left: 7.7%;
+        right: 8.82%;
+        top: 17.33%;
+        bottom: 0%;
+    }
 }
 
 .leave__email {
-    display: flex;
-    flex-direction: column;
+    padding: 48px 18px 74px 580px;
     .form__title {
         width: 445px;
         height: 82px;
@@ -371,9 +378,29 @@ body {
     }
 }
 
+input[type="email"] {
+    width: 248px;
+    height: 52px;
+    padding: 14px 16px;
+    border-radius: 5px 0 0 5px;
+    font-size: 15px;
+    border: none;
+}
+
+input[type="submit"] {
+    width: 120px;
+    height: 48px;
+    padding: 14px 24px;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    background: #18191f;
+    border: none;
+    font-family: "GilroyBold";
+    font-size: 14px;
+}
+
 // ============================Footer
 .footer {
-    margin-top: 100px;
     background: #1d2530;
     width: 100%;
 }
