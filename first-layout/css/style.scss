@@ -346,6 +346,31 @@ body {
     }
 }
 
+// ============================Form
+.form {
+    padding: 90px 0;
+    width: 100%;
+}
+
+.form__inner {
+    display: block;
+    background: linear-gradient(25deg, #685ed6 56%, #6c6ee7 55%);
+    border-radius: 6px;
+    height: 288px;
+}
+
+.leave__email {
+    display: flex;
+    flex-direction: column;
+    .form__title {
+        width: 445px;
+        height: 82px;
+        font-family: "GilroyBold";
+        font-size: 33px;
+        color: #fff;
+    }
+}
+
 // ============================Footer
 .footer {
     margin-top: 100px;

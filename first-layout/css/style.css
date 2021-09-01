@@ -488,6 +488,36 @@ body {
   margin: 0;
 }
 
+.form {
+  padding: 90px 0;
+  width: 100%;
+}
+
+.form__inner {
+  display: block;
+  background: linear-gradient(25deg, #685ed6 56%, #6c6ee7 55%);
+  border-radius: 6px;
+  height: 288px;
+}
+
+.leave__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.leave__email .form__title {
+  width: 445px;
+  height: 82px;
+  font-family: "GilroyBold";
+  font-size: 33px;
+  color: #fff;
+}
+
 .footer {
   margin-top: 100px;
   background: #1d2530;
