@@ -104,20 +104,29 @@ body {
 
 .nav {
   font-size: 22px;
-  color: #1d2530;
 }
 
 .nav .nav__item {
   display: inline-block;
   vertical-align: top;
+  text-align: center;
   margin: 0 18px;
+  color: #1d2530;
   text-decoration: none;
 }
 
 .nav .nav__item:hover {
   color: #685ed6;
   font-weight: bold;
-  margin: 0 7px;
+}
+
+.nav .nav__item::after {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .wrap {
@@ -559,6 +568,10 @@ input[type="submit"] {
   border: none;
   font-family: "GilroyBold";
   font-size: 14px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
 }
 
 .footer {

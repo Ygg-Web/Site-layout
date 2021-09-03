@@ -56,17 +56,25 @@ body {
 
 .nav {
     font-size: 22px;
-    color: #1d2530;
     .nav__item {
         display: inline-block;
         vertical-align: top;
+        text-align: center;
         margin: 0 18px;
+        color: #1d2530;
         text-decoration: none;
         &:hover {
             color: #685ed6;
             font-weight: bold;
-            margin: 0 7px;
         }
+    }
+    .nav__item::after {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
     }
 }
 
@@ -326,7 +334,6 @@ body {
         font-family: "GilroyRegular";
         font-size: 16px;
         margin-bottom: 56px;
-        // position: relative;
     }
     &:before {
         content: "";
@@ -415,6 +422,9 @@ input[type="submit"] {
     border: none;
     font-family: "GilroyBold";
     font-size: 14px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // ============================Footer
