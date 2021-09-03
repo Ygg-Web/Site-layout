@@ -423,6 +423,10 @@ body {
   width: 100%;
 }
 
+.clients__inner {
+  position: relative;
+}
+
 .comments {
   margin: 80px 0;
   display: -webkit-box;
@@ -513,6 +517,29 @@ body {
   font-family: "GilroyRegular";
   font-size: 16px;
   margin: 0;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dot {
+  display: inline-block;
+  margin: 0 10px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #1d2530;
+  border-radius: 50%;
+  outline: none;
+}
+
+.dot:active {
+  background-color: #685ed6;
 }
 
 .form {
@@ -651,7 +678,7 @@ input[type="submit"]:hover {
 }
 
 .nav__footer .link__item:hover {
-  font-family: "GilroyBold";
+  color: #c4c4c4;
 }
 
 .footer__end {
