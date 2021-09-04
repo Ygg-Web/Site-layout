@@ -132,12 +132,18 @@ body {
     background-color: #685ed6;
     text-decoration: none;
     transition: background-color .2s linear;
+    border: none;
     &--small {
         width: 168px;
         height: 48px;
     }
     &--long {
         width: 287px;
+    }
+    &--form {
+        width: 400px;
+        display: block;
+        outline: none;
     }
     &:hover {
         background-color: #c0d8fb;
@@ -503,7 +509,6 @@ input[type="submit"] {
         margin: 6px 0;
         transition: color .2s linear;
         &:hover {
-            // font-family: "GilroyBold";
             color: #c4c4c4;
         }
     }
@@ -527,7 +532,7 @@ input[type="submit"] {
     top: 0;
     left: 0;
     z-index: 1050;
-    display: none;
+    // display: none;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -562,4 +567,18 @@ input[type="submit"] {
     border: none;
     background-color: transparent;
     cursor: pointer
+}
+
+.modal__title {
+    font-size: 26px;
+    font-family: "GilroyBold";
+    text-align: center;
+    color: #685ed6;
+}
+
+.modal__input {
+    width: 400px;
+    height: 40px;
+    padding: 14px;
+    margin: 5px
 }
