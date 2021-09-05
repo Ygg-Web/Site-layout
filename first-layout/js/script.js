@@ -2,39 +2,27 @@ const btnEntry = document.querySelector('.btn-entrance'),
     btnRegistration = document.querySelector('.btn-registration'),
     modal = document.querySelector('.modal'),
     modalRegistration = document.querySelector('.modal_registration');
-// modalRegistration = document.querySelector('[data-registration]');
 
-function openModal() {
-    modal.classList.add('show');
-    modal.classList.remove('hide');
+function openModal(nameModal) {
+    nameModal.classList.add('show');
+    nameModal.classList.remove('hide');
 }
 
-function openModalRegistration() {
-    modalRegistration.classList.add('show');
-    modalRegistration.classList.remove('hide');
+function closeModal(nameModal) {
+    nameModal.classList.add('hide');
+    nameModal.classList.remove('show');
 }
 
-btnEntry.addEventListener('click', openModal);
-btnRegistration.addEventListener('click', openModalRegistration);
+btnEntry.addEventListener('click', () => openModal(modal));
+btnRegistration.addEventListener('click', () => openModal(modalRegistration));
 
-function closeModal() {
-    modal.classList.add('hide');
-    modal.classList.remove('show');
+function closeWindow(nameModal) {
+    nameModal.addEventListener('click', (event) => {
+        if (event.target === nameModal || event.target.getAttribute('data-close') == '') {
+            closeModal(nameModal);
+        }
+    });
 }
 
-function closeModalRegistration() {
-    modalRegistration.classList.add('hide');
-    modalRegistration.classList.remove('show');
-}
-
-modal.addEventListener('click', (event) => {
-    if (event.target === modal || event.target.getAttribute('data-close') == '') {
-        closeModal();
-    }
-});
-
-modalRegistration.addEventListener('click', (event) => {
-    if (event.target === modalRegistration || event.target.getAttribute('data-close') == '') {
-        closeModalRegistration();
-    }
-});
+closeWindow(modal);
+closeWindow(modalRegistration);
