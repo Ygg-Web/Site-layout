@@ -715,8 +715,8 @@ input[type="submit"]:hover {
 
 .modal__dialog {
   max-width: 480px;
-  height: 500px;
-  margin: 70px auto;
+  height: 502px;
+  margin: 200px auto;
 }
 
 .modal__content {
@@ -725,8 +725,6 @@ input[type="submit"]:hover {
   max-height: 502px;
   padding: 100px 70px;
   background-color: #fff;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
   max-height: 80vh;
   overflow-y: auto;
@@ -734,13 +732,8 @@ input[type="submit"]:hover {
 
 .modal__close {
   position: absolute;
-  top: 8px;
-  right: 14px;
-  font-size: 30px;
-  color: #000;
-  opacity: .5;
-  font-weight: 700;
-  border: none;
+  top: 6.25%;
+  right: 6.25%;
   background-color: transparent;
   cursor: pointer;
 }
