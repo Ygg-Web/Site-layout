@@ -702,7 +702,8 @@ input[type="submit"]:hover {
   padding: 24px 0;
 }
 
-.modal {
+.modal,
+.modal_registration {
   position: fixed;
   top: 0;
   left: 0;
@@ -776,5 +777,13 @@ input[type="submit"]:hover {
 
 .password-control.view {
   background: url(/no-view.svg) 0 0 no-repeat;
+}
+
+.show {
+  display: block;
+}
+
+hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

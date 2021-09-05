@@ -24,8 +24,8 @@
                     <a class="nav__item" href="#" title="Оплата">Оплата</a>
                     <a class="nav__item" href="#" title="Контакты">Контакты</a>
                     <a class="nav__item" href="#" title="Выход">Выход</a> -->
-                    <button class="btn btn-entrance">Вход</button>
-                    <button class="btn btn-registration">Регистрация</button>
+                    <button data-modal class="btn btn-entrance">Вход</button>
+                    <button data-modal class="btn btn-registration">Регистрация</button>
                 </nav>
             </div>
         </div>
@@ -290,7 +290,7 @@
             <div class="modal__content">
                 <form action="#">
                     <div class="modal__close">
-                        <img src="./img/modal/close.svg" alt="close">
+                        <img data-close src="./img/modal/close.svg" alt="close">
                     </div>
                     <div class="modal__title">Вход</div>
                     <input class="modal__input" required type="phone" name="phone" placeholder="Телефон">
@@ -303,7 +303,34 @@
             </div>
         </div>
     </div>
+
+
+
+    <div data-registration class="modal_registration">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div class="modal__close">
+                        <img data-close src="./img/modal/close.svg" alt="close">
+                    </div>
+                    <div class="modal__title">Регистрация</div>
+                    <input class="modal__input" required type="phone" name="phone" placeholder="Телефон">
+                    <input class="modal__input" required type="email" name="email" placeholder="Электронная почта">
+                    <div class="password">
+                        <input class="modal__input" required type="password" name="password" placeholder="Пароль">
+                        <a href="#" class="password-control"></a>
+                    </div>
+                    <div class="password">
+                        <input class="modal__input" required type="password" name="password" placeholder="Повторите пароль">
+                        <a href="#" class="password-control"></a>
+                    </div>
+                    <button class="btn btn--form">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Modal -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

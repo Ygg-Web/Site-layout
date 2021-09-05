@@ -530,7 +530,8 @@ input[type="submit"] {
 }
 
 // ============================Modal
-.modal {
+.modal,
+.modal_registration {
     position: fixed;
     top: 0;
     left: 0;
@@ -604,4 +605,12 @@ input[type="submit"] {
 
 .password-control.view {
     background: url(/no-view.svg) 0 0 no-repeat;
+}
+
+.show {
+    display: block;
+}
+
+hide {
+    display: none;
 }
