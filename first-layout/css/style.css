@@ -129,12 +129,12 @@ body {
   visibility: hidden;
 }
 
-.wrap {
+.offer {
   padding-top: 125px;
   width: 100%;
 }
 
-.wrap__inner {
+.offer__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +143,7 @@ body {
           justify-content: space-between;
 }
 
-.slogan {
+.offer-slogan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,12 +218,12 @@ body {
   color: #685ed6;
 }
 
-.desc {
+.descr {
   padding-top: 96px;
   width: 100%;
 }
 
-.desc__inner {
+.descr__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +240,7 @@ body {
   margin-bottom: 68px;
 }
 
-.item__definition {
+.definition__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,12 +284,12 @@ body {
   padding-right: 100px;
 }
 
-.tarif {
+.tariff {
   padding-top: 130px;
   width: 100%;
 }
 
-.tarif__inner {
+.tariff__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,7 +324,7 @@ body {
   color: #1d2530;
 }
 
-.tarifs {
+.tariffs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,7 +335,7 @@ body {
   margin: 0 auto 30px;
 }
 
-.tarif__item {
+.tariff__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,13 +349,13 @@ body {
   margin: 0 33px;
 }
 
-.tarif__item .tarif__type {
+.tariff__item .tariff__type {
   font-family: "GilroyBlack";
   font-size: 24px;
   color: #685ed6;
 }
 
-.tarif__item .tarif__desc {
+.tariff__item .tariff__desc {
   font-family: "GilroyBold";
   font-size: 28px;
   color: #1d2530;
@@ -363,7 +363,7 @@ body {
   text-align: center;
 }
 
-.tarif__item .tarif__price {
+.tariff__item .tariff__price {
   font-family: "GilroyMedium";
   font-size: 20px;
   color: #1d2530;
