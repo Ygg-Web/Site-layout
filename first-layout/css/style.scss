@@ -220,7 +220,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .title__desc {
+    .title__info {
         font-family: "GilroyBlack";
         font-size: 39px;
         color: #1d2530;
@@ -248,7 +248,7 @@ body {
         font-size: 24px;
         color: #685ed6;
     }
-    .tariff__desc {
+    .tariff__info {
         font-family: "GilroyBold";
         font-size: 28px;
         color: #1d2530;
@@ -291,7 +291,7 @@ body {
     margin-top: 70px;
 }
 
-.step__desc {
+.step__descr {
     text-align: center;
     width: 270px;
     margin-bottom: 65px;
@@ -329,7 +329,7 @@ body {
     align-items: center;
 }
 
-.comment__wrap {
+.comment {
     width: 540px;
     height: 290px;
     text-align: center;
@@ -501,7 +501,7 @@ input[type="submit"] {
     margin-right: 150px;
 }
 
-.nav__footer {
+.nav__link {
     display: flex;
     flex-direction: column;
     .link__item {
