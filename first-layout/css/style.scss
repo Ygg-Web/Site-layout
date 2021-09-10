@@ -1,19 +1,11 @@
 @import "./fonts/fonts.scss";
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
-}
-
+$primary-color: #1d2530;
+$secondary-color: #685ed6;
 *,
 *:before,
 *:after {
-    // margin: 0;
-    // padding: 0;
+    margin: 0;
+    padding: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -22,7 +14,16 @@ h6 {
 body {
     font-family: 'GilroyRegular' sans-serif;
     line-height: 32px;
-    color: #1d2530;
+    color: $primary-color;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
 }
 
 .container {
@@ -45,7 +46,6 @@ body {
 .logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
     .logo__icon {
         width: 55px;
         height: 39.63px;
@@ -66,8 +66,11 @@ body {
         color: #1d2530;
         text-decoration: none;
         &:hover {
-            color: #685ed6;
+            color: $secondary-color;
             font-weight: bold;
+        }
+        &:last-child {
+            margin: 0 0 0 18px;
         }
     }
     .nav__item::after {
@@ -82,42 +85,43 @@ body {
 
 // ==============================Секция 1
 .offer {
-    padding-top: 125px;
+    padding: 95px 0 59px;
     width: 100%;
 }
 
 .offer__inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .offer-slogan {
     display: flex;
     flex-direction: column;
-    width: 480px;
+    max-width: 480px;
+    padding: 35px 0 0 0;
 }
 
 .slogan__title {
     display: inline-block;
-    width: 398px;
+    max-width: 383px;
     height: 120px;
     font-family: 'GilroyBlack';
-    font-size: 52px;
-    line-height: 55px;
-    color: #685ed6;
-    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 60px;
+    color: $secondary-color;
+    margin-bottom: 12px;
     span {
-        color: #1d2530
+        color: $primary-color
     }
 }
 
 .slogan__text {
-    margin-top: 0;
+    margin: 12px 0 32px 0;
     font-size: 24px;
     line-height: 34px;
-    color: #1d2530;
     span {
-        color: #685ed6;
+        color: $secondary-color;
         font-family: 'GilroyBlack';
     }
 }
@@ -131,32 +135,35 @@ body {
     padding: 12px 32px;
     color: #fff;
     border-radius: 6px;
-    background-color: #685ed6;
+    background-color: $secondary-color;
     text-decoration: none;
     transition: background-color .2s linear;
     border: none;
     &--small {
-        width: 168px;
+        max-width: 168px;
         height: 48px;
     }
     &--long {
-        width: 287px;
+        max-width: 287px;
     }
     &--form {
-        width: 100%;
+        max-width: 100%;
         height: 48px;
         display: block;
         margin: 56px 0;
     }
     &:hover {
         background-color: #f1e4ff;
-        color: #685ed6;
+        color: $secondary-color;
+    }
+    &-entrance {
+        margin-right: 12px;
     }
 }
 
 // ====================================Секция 2
 .descr {
-    padding-top: 96px;
+    padding: 70px 0 82px;
     width: 100%;
 }
 
@@ -165,11 +172,14 @@ body {
     justify-content: space-between;
 }
 
+.definition {
+    padding: 25px 0 0 0;
+}
+
 .definition__title {
     font-family: 'GilroyBlack';
-    font-size: 25px;
+    font-size: 30px;
     width: 530px;
-    color: #1d2530;
     margin-bottom: 68px;
 }
 
@@ -177,7 +187,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 25px;
+    margin: 0 0 49px 0;
+    &:last-child {
+        margin: 0;
+    }
 }
 
 .item__text {
@@ -188,17 +201,16 @@ body {
 }
 
 .item__title {
-    padding: 2px 0;
-    margin: 2px 0;
+    margin: 0 0 4px 0;
     font-family: "GilroySemiBold";
     font-size: 24px;
-    color: #1d2530;
 }
 
 .item__subtitle {
     margin: 0;
     font-family: "GilroyRegular";
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .ilustrion__definition {
@@ -207,7 +219,7 @@ body {
 
 // =========================Секция 3
 .tariff {
-    padding-top: 130px;
+    padding-top: 100px;
     width: 100%;
 }
 
@@ -220,15 +232,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 0 47px 0;
     .title__info {
         font-family: "GilroyBlack";
-        font-size: 39px;
-        color: #1d2530;
+        font-size: 40px;
+        line-height: 64px;
+        margin: 0 0 16px 0;
     }
     .title__text {
         font-family: "GilroyBold";
         font-size: 24px;
-        color: #1d2530;
     }
 }
 
@@ -246,7 +259,8 @@ body {
     .tariff__type {
         font-family: "GilroyBlack";
         font-size: 24px;
-        color: #685ed6;
+        line-height: 48px;
+        color: $secondary-color;
     }
     .tariff__info {
         font-family: "GilroyBold";
@@ -611,6 +625,6 @@ input[type="submit"] {
     display: block;
 }
 
-hide {
+.hide {
     display: none;
 }
