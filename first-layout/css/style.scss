@@ -86,7 +86,7 @@ body {
 // ==============================Секция 1
 .offer {
     padding: 95px 0 59px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .offer__inner {
@@ -164,7 +164,7 @@ body {
 // ====================================Секция 2
 .descr {
     padding: 70px 0 82px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .descr__inner {
@@ -220,7 +220,7 @@ body {
 // =========================Секция 3
 .tariff {
     padding-top: 100px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .tariff__inner {
@@ -232,7 +232,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 47px 0;
     .title__info {
         font-family: "GilroyBlack";
         font-size: 40px;
@@ -248,6 +247,7 @@ body {
 .tariffs {
     display: flex;
     flex-direction: row;
+    margin: 40px -33px 0 -33px;
 }
 
 .tariff__item {
@@ -267,7 +267,8 @@ body {
         line-height: 48px;
         margin: 0 0 46px 0;
         color: $secondary-color;
-        width: 350px;
+        min-width: 350px;
+        text-align: center;
         background: rgba(104, 94, 214, 0.05);
     }
     .tariff__info {
@@ -287,8 +288,8 @@ body {
 
 // =============================Секция 4
 .steps {
-    padding-top: 100px;
-    width: 100%;
+    padding: 124px 0 100px 0;
+    max-width: 100%;
 }
 
 .steps__items {
@@ -302,37 +303,53 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    &-position {
+        margin: 85px 0 0 0;
+    }
 }
 
-.step__icon {
-    margin-bottom: 12px;
-}
-
-.position--item {
-    margin-top: 70px;
+.step__number {
+    width: 72px;
+    height: 72px;
+    background: #F1E4FF;
+    border-radius: 50%;
+    font-family: "GilroyBold";
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-color;
+    margin: 0 0 16px 0;
 }
 
 .step__descr {
     text-align: center;
-    width: 270px;
-    margin-bottom: 65px;
+    max-width: 270px;
     .step__title {
         font-family: "GilroyBold";
-        font-size: 24px;
-        margin: 2px 0;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 0 4px 0;
     }
     .step__text {
         font-family: "GilroyRegular";
-        font-size: 20px;
-        margin: 2px 0;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.step__img {
+    margin: 56px 0 0 0;
+    &-sml {
+        margin: 26px 0 0 0;
     }
 }
 
 // ============================Clients
 .clients {
-    padding-top: 100px;
-    width: 100%;
+    padding: 17px 0 80px 0;
+    max-width: 100%;
 }
 
 .clients__inner {
@@ -340,9 +357,10 @@ body {
 }
 
 .comments {
-    margin: 80px 0;
+    margin: 32px 0 0 0;
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
 .comment__item {
@@ -352,21 +370,23 @@ body {
 }
 
 .comment {
-    width: 540px;
-    height: 290px;
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    height: 100%;
     text-align: center;
     box-shadow: 0 10px 36px #c4c4c4;
     border-radius: 10px;
     padding: 32px 32px 56px;
-    position: relative;
     .comment__title {
         font-family: "GilroyBold";
-        font-size: 24px;
+        font-size: 18px;
+        line-height: 28px;
     }
     .comment__text {
         font-family: "GilroyRegular";
-        font-size: 16px;
-        margin-bottom: 56px;
+        font-size: 14px;
+        line-height: 24px;
     }
     &:before {
         content: "";
@@ -385,7 +405,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 30px 0;
+    margin: 28px 0 32px 0;
 }
 
 .client__info {
@@ -394,12 +414,13 @@ body {
     margin-left: 16px;
     .client__name {
         font-family: "GilroyBold";
-        font-size: 24px;
+        font-size: 18px;
+        line-height: 28px;
     }
     .client__email {
         font-family: "GilroyRegular";
-        font-size: 16px;
-        margin: 0;
+        font-size: 14px;
+        line-height: 24px;
     }
 }
 
@@ -413,26 +434,26 @@ body {
 
 .dot {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 12px;
     width: 10px;
     height: 10px;
-    border: 2px solid #1d2530;
+    border: 2px solid $primary-color;
     border-radius: 50%;
     outline: none;
     &:active {
-        background-color: #685ed6;
+        background-color: $secondary-color;
     }
 }
 
 // ============================Form
 .form {
     padding: 90px 0;
-    width: 100%;
+    max-width: 100%;
 }
 
 .form__inner {
     display: block;
-    background: linear-gradient(25deg, #685ed6 56%, #6c6ee7 55%);
+    background: linear-gradient(45deg, #685ed6 55%, #6c6ee7 55%);
     border-radius: 6px;
     height: 288px;
     position: relative;
@@ -448,16 +469,18 @@ body {
 .leave__email {
     padding: 48px 18px 74px 580px;
     .form__title {
-        width: 445px;
+        max-width: 445px;
         height: 82px;
         font-family: "GilroyBold";
         font-size: 33px;
+        line-height: 41px;
         color: #fff;
+        margin: 0 0 32px 0;
     }
 }
 
 input[type="email"] {
-    width: 248px;
+    max-width: 248px;
     height: 52px;
     padding: 14px 16px;
     border-radius: 5px 0 0 5px;
@@ -467,7 +490,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-    width: 120px;
+    max-width: 120px;
     height: 48px;
     padding: 14px 24px;
     border-radius: 0 5px 5px 0;
@@ -476,26 +499,24 @@ input[type="submit"] {
     border: none;
     font-family: "GilroyBold";
     font-size: 14px;
-    &:hover {
-        cursor: pointer;
-    }
+    cursor: pointer;
 }
 
 // ============================Footer
 .footer {
-    background: #1d2530;
-    width: 100%;
+    background: $primary-color;
+    max-width: 100%;
 }
 
 .footer__inner {
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
+    padding: 110px 0 78px 0;
 }
 
 .logo--footer {
     margin-right: 455px;
-    width: 90px;
+    max-width: 90px;
     flex-direction: column;
     align-items: flex-start;
     .logo__icon {
@@ -518,9 +539,13 @@ input[type="submit"] {
 .link__items {
     font-family: "GilroyMedium";
     font-size: 20px;
+    line-height: 30px;
     color: #fff;
     width: 160px;
-    margin-right: 150px;
+    margin: 0 150px 0 0;
+    .link__title {
+        margin-bottom: 32px;
+    }
 }
 
 .nav__link {
@@ -529,6 +554,7 @@ input[type="submit"] {
     .link__item {
         font-family: "GilroyRegular";
         font-size: 16px;
+        line-height: 26px;
         color: #fff;
         text-decoration: none;
         margin: 6px 0;
