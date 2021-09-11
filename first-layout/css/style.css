@@ -71,9 +71,28 @@ body {
   padding: 0 15px;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+
 .header {
   width: 100%;
   padding-top: 40px;
+  background: rgba(242, 247, 255, 0.5);
 }
 
 .header__inner {
@@ -144,16 +163,36 @@ body {
 .offer {
   padding: 95px 0 285px;
   max-width: 100%;
+  background: rgba(242, 247, 255, 0.5);
+}
+
+@media (max-width: 1200px) {
+  .offer {
+    padding: 65px 0 123px;
+  }
+}
+
+@media (max-width: 991px) {
+  .offer {
+    padding: 45px 0 73px;
+  }
+}
+
+@media (max-width: 767px) {
+  .offer {
+    padding: 45px 0 73px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer {
+    padding: 45px 0 318px;
+  }
 }
 
 .offer__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: relative;
+  z-index: 2;
 }
 
 .offer-slogan {
@@ -168,9 +207,29 @@ body {
   padding: 35px 0 0 0;
 }
 
+@media (max-width: 1200px) {
+  .offer-slogan {
+    max-width: 380px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .offer-slogan {
+    max-width: 270px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer-slogan {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 .slogan__title {
   display: inline-block;
-  max-width: 383px;
   font-family: 'GilroyBlack';
   font-size: 50px;
   line-height: 120%;
@@ -182,6 +241,18 @@ body {
   color: #1d2530;
 }
 
+@media (max-width: 1200px) {
+  .slogan__title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slogan__title {
+    font-size: 32px;
+  }
+}
+
 .slogan__text {
   margin: 12px 0 32px 0;
   font-size: 24px;
@@ -191,6 +262,18 @@ body {
 .slogan__text span {
   color: #685ed6;
   font-family: 'GilroyBlack';
+}
+
+@media (max-width: 1200px) {
+  .slogan__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slogan__text {
+    font-size: 18px;
+  }
 }
 
 .btn {
@@ -242,12 +325,61 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .offer__image img {
+    width: 520px;
+    height: 383px;
+  }
+}
+
+@media (max-width: 992px) {
+  .offer__image img {
+    width: 420px;
+    height: 338px;
+  }
+}
+
+@media (max-width: 767px) {
+  .offer__image img {
+    width: 330px;
+    height: 266px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offer__image {
+    -webkit-transform: translate(0, 115%);
+            transform: translate(0, 115%);
+    left: 50%;
+    margin-left: -165px;
+  }
 }
 
 .descr {
   padding: 70px 0 182px;
   max-width: 100%;
+  background: rgba(242, 247, 255, 0.5);
+}
+
+@media (max-width: 1200px) {
+  .descr {
+    padding: 60px 0 93px;
+  }
+}
+
+@media (max-width: 992px) {
+  .descr {
+    padding: 60px 0 135px;
+  }
+}
+
+@media (max-width: 575px) {
+  .descr {
+    padding: 60px 0 551px;
+  }
 }
 
 .descr__inner {
@@ -258,18 +390,38 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  z-index: 2;
 }
 
 .definition {
   padding: 25px 0 0 0;
 }
 
+@media (max-width: 1200px) {
+  .definition {
+    padding: 0;
+  }
+}
+
 .definition__title {
   font-family: 'GilroyBlack';
   font-size: 30px;
   line-height: 106.66667%;
-  width: 530px;
+  max-width: 530px;
   margin-bottom: 68px;
+}
+
+@media (max-width: 1200px) {
+  .definition__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .definition__title {
+    font-size: 23px;
+  }
 }
 
 .definition__item {
@@ -290,6 +442,19 @@ body {
   margin: 0;
 }
 
+@media (max-width: 1200px) {
+  .definition__item {
+    margin: 0 0 16px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo__item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .item__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,8 +463,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 428px;
+  max-width: 428px;
   margin-left: 27.95px;
+}
+
+@media (max-width: 992px) {
+  .item__text {
+    max-width: 354px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .item__text {
+    max-width: 271px;
+  }
 }
 
 .item__title {
@@ -307,6 +485,18 @@ body {
   font-family: "GilroySemiBold";
   font-size: 24px;
   line-height: 106.66667%;
+}
+
+@media (max-width: 1200px) {
+  .item__title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .item__title {
+    font-size: 20px;
+  }
 }
 
 .item__subtitle {
@@ -324,7 +514,34 @@ body {
   height: 100%;
   right: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .definition__image img {
+    width: 350px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .definition__image {
+    -webkit-transform: translate(48%, 0);
+            transform: translate(48%, 0);
+  }
+  .definition__image img {
+    width: 300px;
+    height: 487px;
+  }
+}
+
+@media (max-width: 575px) {
+  .definition__image {
+    -webkit-transform: translate(0, 105%);
+            transform: translate(0, 105%);
+    left: 50%;
+    margin-left: -150px;
+  }
 }
 
 .tariff {
@@ -515,6 +732,7 @@ body {
 .clients {
   padding: 17px 0 80px 0;
   max-width: 100%;
+  background: rgba(242, 247, 255, 0.5);
 }
 
 .clients__inner {
