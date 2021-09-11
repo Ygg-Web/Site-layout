@@ -549,6 +549,18 @@ body {
   max-width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .tariff {
+    padding: 70px 0 0 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .tariff {
+    padding: 54px 0 0 0;
+  }
+}
+
 .tariff__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,6 +595,33 @@ body {
   font-family: "GilroyBold";
   font-size: 24px;
   line-height: 133.33333%;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .title .title__info {
+    font-size: 35px;
+    margin: 0 0 12px 0;
+  }
+  .title .title__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .title .title__info {
+    font-size: 30px;
+    margin: 0 0 8px 0;
+  }
+  .title .title__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .title .title__text {
+    max-width: 214px;
+  }
 }
 
 .tariffs {
@@ -594,6 +633,12 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 40px -33px 0 -33px;
+}
+
+@media (max-width: 991px) {
+  .ttariffs {
+    margin: 36px -33px 0 -33px;
+  }
 }
 
 .tariff__colum {
@@ -650,8 +695,14 @@ body {
 }
 
 .steps {
-  padding: 124px 0 100px 0;
+  padding: 100px 0 121px 0;
   max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .steps {
+    padding: 88px 0 49px 0;
+  }
 }
 
 .steps__items {
@@ -663,6 +714,13 @@ body {
           justify-content: space-between;
   margin-top: 56px;
   background: url(../img/steps/bg.svg) no-repeat top;
+}
+
+@media (max-width: 1200px) {
+  .steps__items {
+    margin-top: 39px;
+    background: none;
+  }
 }
 
 .step__item {
@@ -680,6 +738,12 @@ body {
 
 .step__item-position {
   margin: 85px 0 0 0;
+}
+
+@media (max-width: 1200px) {
+  .step__item-position {
+    margin: 0;
+  }
 }
 
 .step__number {
@@ -727,6 +791,19 @@ body {
 
 .step__img-sml {
   margin: 26px 0 0 0;
+}
+
+@media (max-width: 1200px) {
+  .step__img {
+    margin: 42px 0 0 0;
+  }
+  .step__img-sml {
+    margin: 42px 0 0 0;
+  }
+  .step__img img {
+    width: 210px;
+    height: 421px;
+  }
 }
 
 .clients {
