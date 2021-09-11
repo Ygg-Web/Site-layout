@@ -382,10 +382,15 @@ body {
 }
 
 .comments {
-    margin: 32px 0 0 0;
+    margin: 52px -15px 0 15px;
     display: flex;
     justify-content: space-around;
     position: relative;
+}
+
+.comment_colum {
+    padding: 0 15px;
+    flex: 0 1 50%
 }
 
 .comment__item {
@@ -397,7 +402,7 @@ body {
 .comment {
     display: flex;
     flex-direction: column;
-    max-width: 540px;
+    // max-width: 540px;
     height: 100%;
     text-align: center;
     box-shadow: 0 10px 36px #c4c4c4;
@@ -470,6 +475,16 @@ body {
     }
 }
 
+.clients__img-bg {
+    position: absolute;
+    transform: translate(-15%, 0);
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    z-index: -1;
+}
+
 // ============================Form
 .form {
     padding: 90px 0;
@@ -480,13 +495,12 @@ body {
     display: block;
     background: linear-gradient(45deg, #685ed6 55%, #6c6ee7 55%);
     border-radius: 6px;
-    height: 288px;
     position: relative;
     >img {
         position: absolute;
         left: 7.7%;
         right: 8.82%;
-        top: 17.33%;
+        top: 17.0%;
         bottom: 0%;
     }
 }
@@ -494,8 +508,6 @@ body {
 .leave__email {
     padding: 48px 18px 74px 580px;
     .form__title {
-        max-width: 445px;
-        height: 82px;
         font-family: "GilroyBold";
         font-size: 33px;
         line-height: 41 / 33 * 100%;
