@@ -20,6 +20,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .main {
@@ -53,17 +54,19 @@ body {
     .logo__title {
         font-family: 'GilroyBold';
         font-size: 32px;
+        line-height: 21 / 32 * 100%;
     }
 }
 
 .nav {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 26 / 22 * 100%;
     .nav__item {
         display: inline-block;
         vertical-align: top;
         text-align: center;
         margin: 0 18px;
-        color: #1d2530;
+        color: $primary-color;
         text-decoration: none;
         &:hover {
             color: $secondary-color;
@@ -85,7 +88,7 @@ body {
 
 // ==============================Секция 1
 .offer {
-    padding: 95px 0 59px;
+    padding: 95px 0 285px;
     max-width: 100%;
 }
 
@@ -105,10 +108,9 @@ body {
 .slogan__title {
     display: inline-block;
     max-width: 383px;
-    height: 120px;
     font-family: 'GilroyBlack';
     font-size: 50px;
-    line-height: 60px;
+    line-height: 60 / 50 * 100%;
     color: $secondary-color;
     margin-bottom: 12px;
     span {
@@ -119,7 +121,7 @@ body {
 .slogan__text {
     margin: 12px 0 32px 0;
     font-size: 24px;
-    line-height: 34px;
+    line-height: 34 / 24 * 100%;
     span {
         color: $secondary-color;
         font-family: 'GilroyBlack';
@@ -129,7 +131,7 @@ body {
 .btn {
     font-family: 'GilroyBold';
     font-size: 18px;
-    line-height: 24px;
+    line-height: 24 / 18 * 100%;
     display: inline-block;
     vertical-align: top;
     padding: 12px 32px;
@@ -161,15 +163,26 @@ body {
     }
 }
 
+.offer__image {
+    position: absolute;
+    transform: translate(40%, 0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
 // ====================================Секция 2
 .descr {
-    padding: 70px 0 82px;
+    padding: 70px 0 182px;
     max-width: 100%;
 }
 
 .descr__inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .definition {
@@ -179,6 +192,7 @@ body {
 .definition__title {
     font-family: 'GilroyBlack';
     font-size: 30px;
+    line-height: 32 / 30 * 100%;
     width: 530px;
     margin-bottom: 68px;
 }
@@ -204,17 +218,24 @@ body {
     margin: 0 0 4px 0;
     font-family: "GilroySemiBold";
     font-size: 24px;
+    line-height: 32 / 30 * 100%;
 }
 
 .item__subtitle {
     margin: 0;
     font-family: "GilroyRegular";
     font-size: 16px;
-    line-height: 26px;
+    line-height: 26 / 16 * 100%;
 }
 
-.ilustrion__definition {
-    padding-right: 100px;
+.definition__image {
+    position: absolute;
+    transform: translate(55%, 0);
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
 
 // =========================Секция 3
@@ -235,12 +256,13 @@ body {
     .title__info {
         font-family: "GilroyBlack";
         font-size: 40px;
-        line-height: 64px;
+        line-height: 64 / 40 * 100%;
         margin: 0 0 16px 0;
     }
     .title__text {
         font-family: "GilroyBold";
         font-size: 24px;
+        line-height: 32 / 24 * 100%;
     }
 }
 
@@ -250,13 +272,16 @@ body {
     margin: 40px -33px 0 -33px;
 }
 
+.tariff__colum {
+    padding: 0 33px;
+    flex: 0 1 33.333%
+}
+
 .tariff__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    max-width: 350px;
-    margin: 0 33px;
     padding: 7px 0 50px 0;
     background: #FCFEFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
@@ -264,7 +289,7 @@ body {
     .tariff__type {
         font-family: "GilroyBlack";
         font-size: 24px;
-        line-height: 48px;
+        line-height: 48 / 24 * 100%;
         margin: 0 0 46px 0;
         color: $secondary-color;
         min-width: 350px;
@@ -274,14 +299,14 @@ body {
     .tariff__info {
         font-family: "GilroyBold";
         font-size: 28px;
-        line-height: 40px;
+        line-height: 40 / 28 * 100%;
         margin: 0 35px 32px 35px;
         text-align: center;
     }
     .tariff__price {
         font-family: "GilroyMedium";
         font-size: 20px;
-        line-height: 30px;
+        line-height: 30 / 20 * 100%;
         margin: 0 0 46px 0;
     }
 }
@@ -315,7 +340,7 @@ body {
     border-radius: 50%;
     font-family: "GilroyBold";
     font-size: 30px;
-    line-height: 30px;
+    line-height: 30 / 30 * 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -329,13 +354,13 @@ body {
     .step__title {
         font-family: "GilroyBold";
         font-size: 18px;
-        line-height: 28px;
+        line-height: 28 / 18 * 100%;
         margin: 0 0 4px 0;
     }
     .step__text {
         font-family: "GilroyRegular";
         font-size: 16px;
-        line-height: 26px;
+        line-height: 26 / 16 * 100%;
     }
 }
 
@@ -381,12 +406,12 @@ body {
     .comment__title {
         font-family: "GilroyBold";
         font-size: 18px;
-        line-height: 28px;
+        line-height: 28 / 18 * 100%;
     }
     .comment__text {
         font-family: "GilroyRegular";
         font-size: 14px;
-        line-height: 24px;
+        line-height: 24 / 14 * 100%;
     }
     &:before {
         content: "";
@@ -415,12 +440,12 @@ body {
     .client__name {
         font-family: "GilroyBold";
         font-size: 18px;
-        line-height: 28px;
+        line-height: 28 / 18 * 100%;
     }
     .client__email {
         font-family: "GilroyRegular";
         font-size: 14px;
-        line-height: 24px;
+        line-height: 24 / 14 * 100%;
     }
 }
 
@@ -473,7 +498,7 @@ body {
         height: 82px;
         font-family: "GilroyBold";
         font-size: 33px;
-        line-height: 41px;
+        line-height: 41 / 33 * 100%;
         color: #fff;
         margin: 0 0 32px 0;
     }
@@ -485,6 +510,7 @@ input[type="email"] {
     padding: 14px 16px;
     border-radius: 5px 0 0 5px;
     font-size: 15px;
+    line-height: 24 / 15 * 100%;
     border: none;
     outline: none;
 }
@@ -499,6 +525,7 @@ input[type="submit"] {
     border: none;
     font-family: "GilroyBold";
     font-size: 14px;
+    line-height: 20 / 14 * 100%;
     cursor: pointer;
 }
 
@@ -510,13 +537,15 @@ input[type="submit"] {
 
 .footer__inner {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 110px 0 78px 0;
 }
 
-.logo--footer {
-    margin-right: 455px;
-    max-width: 90px;
+.footer__logo {
+    flex: 1 1 auto;
+}
+
+.logo__body {
     flex-direction: column;
     align-items: flex-start;
     .logo__icon {
@@ -526,6 +555,7 @@ input[type="submit"] {
     .logo__title {
         font-family: "GilroyBold";
         font-size: 32px;
+        line-height: 24 / 32 * 100%;
         color: #fff;
         margin-top: 10px;
     }
@@ -534,14 +564,14 @@ input[type="submit"] {
 .footer__links {
     display: flex;
     flex-direction: row;
+    flex: 0 1 auto;
 }
 
 .link__items {
     font-family: "GilroyMedium";
     font-size: 20px;
-    line-height: 30px;
+    line-height: 30 / 20 * 100%;
     color: #fff;
-    width: 160px;
     margin: 0 150px 0 0;
     .link__title {
         margin-bottom: 32px;
@@ -554,7 +584,7 @@ input[type="submit"] {
     .link__item {
         font-family: "GilroyRegular";
         font-size: 16px;
-        line-height: 26px;
+        line-height: 26 / 16 * 100%;
         color: #fff;
         text-decoration: none;
         margin: 6px 0;
@@ -570,6 +600,7 @@ input[type="submit"] {
     background: #141b23;
     font-family: "GilroyRegular";
     font-size: 14px;
+    line-height: 24 / 14 * 100%;
     color: #fff;
     p {
         height: 24px;
@@ -620,7 +651,7 @@ input[type="submit"] {
     font-size: 32px;
     font-family: "GilroyBold";
     text-align: center;
-    color: #685ed6;
+    color: $secondary-color;
     margin-bottom: 32px;
 }
 
