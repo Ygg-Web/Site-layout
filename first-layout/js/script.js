@@ -30,17 +30,20 @@ closeWindow(modalRegistration);
 
 // ==Slider=================================================================
 const
-    sliders = document.querySelectorAll('.tariff__item'),
-    sliderLine = document.querySelector('.tariffs__line'),
-    dots = document.querySelectorAll('.dot');
+    slidersTariff = document.querySelectorAll('.tariff__item'),
+    sliderLineTariff = document.querySelector('.tariffs__line'),
+    slidersComment = document.querySelectorAll('.comment__item'),
+    sliderLineComment = document.querySelector('.comments__line'),
+    dotsComment = document.querySelectorAll('.dot-comment');
+dotsTraffic = document.querySelectorAll('.dot-tariff');
 
 let index = 0;
 let width;
 
-const init = () => {
-    width = document.querySelector('.tariff__colum').offsetWidth;
-    sliderLine.style.width = width * sliders.length + 'px';
-    sliders.forEach(slider => {
+const init = (blockWidth, blockLine, blockSliders) => {
+    width = document.querySelector(`${blockWidth}`).offsetWidth;
+    blockLine.style.width = width * blockSliders.length + 'px';
+    blockSliders.forEach(slider => {
         slider.style.width = width + 'px';
         slider.style.height = 'auto';
     });
@@ -48,57 +51,77 @@ const init = () => {
 }
 
 window.addEventListener('resize', init);
-init();
+init('.tariff__item', sliderLineTariff, slidersTariff);
+init('.comment__item', sliderLineComment, slidersComment);
 
-let rollSlider = () => {
-    sliderLine.style.transform = 'translate(-' + index * width + 'px)';
+const rollSlider = (blockLine) => {
+    blockLine.style.transform = 'translate(-' + index * width + 'px)';
 }
 
-const activeSlide = n => {
-    sliders.forEach(slide => {
+const activeSlide = (n, blockSliders) => {
+    blockSliders.forEach(slide => {
         slide.classList.remove('active');
     })
-    sliders[n].classList.add('active');
+    blockSliders[n].classList.add('active');
 }
 
-const activeDot = n => {
-    dots.forEach(dot => {
+const activeDot = (n, blockDots) => {
+    blockDots.forEach(dot => {
         dot.classList.remove('active');
     })
-    dots[n].classList.add('active');
+    blockDots[n].classList.add('active');
 }
 
-const prepareCurrentSlide = ind => {
-    activeSlide(ind);
-    activeDot(ind);
-    rollSlider();
+const prepareCurrentSlide = (ind, blockSliders, blockLine, blockDots) => {
+    activeSlide(ind, blockSliders);
+    activeDot(ind, blockDots);
+    rollSlider(blockLine);
 }
 
-const nextSlide = () => {
-    if (index == sliders.length - 1) {
-        index = 0;
-    } else {
-        index++;
-    }
-    prepareCurrentSlide(index);
-}
+dotsTraffic.forEach((dot, indexDot) => {
+    dot.addEventListener('click', () => {
+        index = indexDot;
+        prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
+    });
+})
 
-const prevSlide = () => {
-    if (index == 0) {
-        index = sliders.length - 1;
-    } else {
-        index--;
-    }
-    prepareCurrentSlide(index);
-}
+dotsComment.forEach((dot, indexDot) => {
+    dot.addEventListener('click', () => {
+        index = indexDot;
+        prepareCurrentSlide(index, slidersComment, slidersComment, dotsComment);
+    });
+})
+
+// function dotsToggle(blockDots) {
+//     blockDots.forEach((dot, indexDot) => {
+//         dot.addEventListener('click', () => {
+//             index = indexDot;
+//             // prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dots);
+//             prepareCurrentSlide(ind, blockSliders, blockLine, blockDots);
+//         });
+//     })
+// }
+
+// dotsToggle(dots);
+
+
+// const nextSlide = () => {
+//     if (index == sliders.length - 1) {
+//         index = 0;
+//     } else {
+//         index++;
+//     }
+//     prepareCurrentSlide(index);
+// }
+
+// const prevSlide = () => {
+//     if (index == 0) {
+//         index = sliders.length - 1;
+//     } else {
+//         index--;
+//     }
+//     prepareCurrentSlide(index);
+// }
 
 // next.addEventListener('click', nextSlide);
 // prev.addEventListener('click', prevSlide);
-
-dots.forEach((dot, indexDot) => {
-    dot.addEventListener('click', () => {
-        index = indexDot;
-        rollSlider();
-        prepareCurrentSlide(index);
-    });
-})
