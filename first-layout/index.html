@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Tocha</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -102,31 +102,40 @@
                         <p class="title__text">Стоимость зависит от трафика сайта</p>
                     </div>
                     <div class="tariffs">
-                        <div class="tariff__colum">
-                            <div class="tariff__item">
-                                <p class="tariff__type">Бесплатно</p>
-                                <p class="tariff__info">Пробный период на 1 месяц</p>
-                                <p class="tariff__price">0₽/ первый месяц</p>
-                                <a class="btn btn--link" href="#"> Подключить за 0₽</a>
+                        <div class="tariffs__line">
+                            <div class="tariff__colum">
+                                <div class="tariff__item active">
+                                    <p class="tariff__type">Бесплатно</p>
+                                    <p class="tariff__info">Пробный период на 1 месяц</p>
+                                    <p class="tariff__price">0₽/ первый месяц</p>
+                                    <a class="btn btn--link" href="#"> Подключить за 0₽</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tariff__colum">
-                            <div class="tariff__item">
-                                <p class="tariff__type">Базовый</p>
-                                <p class="tariff__info">Менее 1000 посещений в сутки</p>
-                                <p class="tariff__price">200₽/ месяц</p>
-                                <a class="btn btn--link" href="#"> Подключить за 200₽</a>
+                            <div class="tariff__colum">
+                                <div class="tariff__item">
+                                    <p class="tariff__type">Базовый</p>
+                                    <p class="tariff__info">Менее 1000 посещений в сутки</p>
+                                    <p class="tariff__price">200₽/ месяц</p>
+                                    <a class="btn btn--link" href="#"> Подключить за 200₽</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tariff__colum">
-                            <div class="tariff__item">
-                                <p class="tariff__type">Премиум</p>
-                                <p class="tariff__info">Более 1000 посещений в сутки</p>
-                                <p class="tariff__price">500₽/ месяц</p>
-                                <a class="btn btn--link" href="#"> Подключить за 500₽</a>
+                            <div class="tariff__colum">
+                                <div class="tariff__item">
+                                    <p class="tariff__type">Премиум</p>
+                                    <p class="tariff__info">Более 1000 посещений в сутки</p>
+                                    <p class="tariff__price">500₽/ месяц</p>
+                                    <a class="btn btn--link" href="#"> Подключить за 500₽</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="dots__wrapper dots__wrapper--show">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
                 </div>
             </section>
             <!-- Section 3 -->
@@ -137,36 +146,43 @@
                         <h2 class="title__info">Всего 3 шага для подключения Telegram чата</h2>
                     </div>
                     <div class="steps__items">
-                        <div class="step__item">
-                            <div class="step__number">1</div>
-                            <div class="step__descr">
-                                <h5 class="step__title">Telegram bot</h5>
-                                <p class="step__text">Вы создаете Telegram бота <br> для вашего сайта</p>
+                        <div class="steps__line">
+                            <div class="step__item">
+                                <div class="step__number"> <span>1</span> </div>
+                                <div class="step__descr">
+                                    <h5 class="step__title">Telegram bot</h5>
+                                    <p class="step__text">Вы создаете Telegram бота <br> для вашего сайта</p>
+                                </div>
+                                <div class="step__img">
+                                    <img src="./img/steps/phoneX1.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="step__img">
-                                <img src="./img/steps/phoneX1.jpg" alt="">
+                            <div class="step__item step__item-position">
+                                <div class="step__number"><span>2</span></div>
+                                <div class="step__descr">
+                                    <h5 class="step__title">Подключение Tocha</h5>
+                                    <p class="step__text">Tocha подключает Telegram бота к вашему сайту</p>
+                                </div>
+                                <div class="step__img step__img-sml">
+                                    <img src="./img/steps/phoneX2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="step__item">
+                                <div class="step__number"><span>3</span></div>
+                                <div class="step__descr">
+                                    <h5 class="step__title">Telegram-чат</h5>
+                                    <p class="step__text">Консультант отвечает <br> на вопросы посетителей сайта</p>
+                                </div>
+                                <div class="step__img">
+                                    <img src="./img/steps/phoneX3.jpg" alt="">
+                                </div>
                             </div>
                         </div>
-                        <div class="step__item step__item-position">
-                            <div class="step__number">2</div>
-                            <div class="step__descr">
-                                <h5 class="step__title">Подключение Tocha</h5>
-                                <p class="step__text">Tocha подключает Telegram бота к вашему сайту</p>
-                            </div>
-                            <div class="step__img step__img-sml">
-                                <img src="./img/steps/phoneX2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="step__item">
-                            <div class="step__number">3</div>
-                            <div class="step__descr">
-                                <h5 class="step__title">Telegram-чат</h5>
-                                <p class="step__text">Консультант отвечает <br> на вопросы посетителей сайта</p>
-                            </div>
-                            <div class="step__img">
-                                <img src="./img/steps/phoneX3.jpg" alt="">
-                            </div>
-                        </div>
+                    </div>
+                    <div class="dots__wrapper dots__wrapper--show">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
             </section>
@@ -179,47 +195,49 @@
                         <h2 class="title__info">Отзывы клиентов</h2>
                     </div>
                     <div class="comments">
-                        <div class="comment_colum">
-                            <div class="comment__item">
-                                <div class="comment">
-                                    <h5 class="comment__title">Как же удобно!</h5>
-                                    <p class="comment__text">В рамках спецификации современных стандарто, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической
-                                        анафеме
-                                    </p>
-                                </div>
-                                <div class="client">
-                                    <div class="client__icon">
-                                        <img src="./img/clients/client1.png" alt="client-avatar">
+                        <div class="comments__line">
+                            <div class="comment_colum">
+                                <div class="comment__item">
+                                    <div class="comment">
+                                        <h5 class="comment__title">Как же удобно!</h5>
+                                        <p class="comment__text">В рамках спецификации современных стандарто, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической
+                                            анафеме
+                                        </p>
                                     </div>
-                                    <div class="client__info">
-                                        <h5 class="client__name">Анна Купер</h5>
-                                        <p class="client__email">romashka.ru</p>
+                                    <div class="client">
+                                        <div class="client__icon">
+                                            <img src="./img/clients/client1.png" alt="client-avatar">
+                                        </div>
+                                        <div class="client__info">
+                                            <h5 class="client__name">Анна Купер</h5>
+                                            <p class="client__email">romashka.ru</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment_colum">
+                                <div class="comment__item">
+                                    <div class="comment">
+                                        <h5 class="comment__title">Теперь мы идем в ногу со временем</h5>
+                                        <p class="comment__text">А еще интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</p>
+                                    </div>
+                                    <div class="client">
+                                        <div class="client__icon">
+                                            <img src="./img/clients/client2.png" alt="client-avatar">
+                                        </div>
+                                        <div class="client__info">
+                                            <h5 class="client__name">Андрей Васильев</h5>
+                                            <p class="client__email">samogon-ont.ru</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="comment_colum">
-                            <div class="comment__item">
-                                <div class="comment">
-                                    <h5 class="comment__title">Теперь мы идем в ногу со временем</h5>
-                                    <p class="comment__text">А еще интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</p>
-                                </div>
-                                <div class="client">
-                                    <div class="client__icon">
-                                        <img src="./img/clients/client2.png" alt="client-avatar">
-                                    </div>
-                                    <div class="client__info">
-                                        <h5 class="client__name">Андрей Васильев</h5>
-                                        <p class="client__email">samogon-ont.ru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dots">
-                            <a href="#" class="dot"></a>
-                            <a href="#" class="dot"></a>
-                            <a href="#" class="dot"></a>
-                        </div>
+                    </div>
+                    <div class="dots__wrapper dots__wrapper--show">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                     <div class="clients__img-bg">
                         <img src="./img/clients/“.svg" alt="bg">
