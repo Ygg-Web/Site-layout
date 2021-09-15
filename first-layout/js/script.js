@@ -96,12 +96,11 @@ let width;
 // +====================================================
 
 // const init = () => {
-//     // width = document.querySelector('.tariff__item').offsetWidth;
-//     width = 400;
+//     width = document.querySelector('.tariff__slider').offsetWidth;
 //     sliderLineTariff.style.width = width * slidersTariff.length + 'px';
 //     console.log(sliderLineTariff.style.width);
 //     slidersTariff.forEach(slider => {
-//         slider.style.width = width + 'px';
+//         slider.style.width = document.querySelector('.tariff__colum').offsetWidth + 'px';
 //         slider.style.height = 'auto';
 //     })
 // }
@@ -144,25 +143,11 @@ let width;
 
 // ================================================
 
-// const init = () => {
-//     // width = document.querySelector('.tariff__item').offsetWidth;
-//     width = 400;
-//     sliderLineTariff.style.width = width * slidersTariff.length + 'px';
-//     console.log(sliderLineTariff.style.width);
-//     slidersTariff.forEach(slider => {
-//         slider.style.width = width + 'px';
-//         slider.style.height = 'auto';
-//     })
-// }
 const init = () => {
-    width = document.querySelector('.comment__colum').offsetWidth;
-    console.log(width);
-    // width = document.querySelector('.comments').clientWidth;
-    // width = 400;
+    // width = document.querySelector('.comment__slider').offsetWidth;
     sliderLineComment.style.width = width * slidersComment.length + 'px';
-    console.log(sliderLineComment.style.width);
     slidersComment.forEach(slider => {
-        slider.style.width = width + 'px';
+        // slider.style.width = document.querySelector('.comment__item').offsetWidth + 'px';
         slider.style.height = 'auto';
     })
 }
