@@ -40,88 +40,164 @@ dotsTraffic = document.querySelectorAll('.dot-tariff');
 let index = 0;
 let width;
 
-const init = (blockWidth, blockLine, blockSliders) => {
-    width = document.querySelector(`${blockWidth}`).offsetWidth;
-    blockLine.style.width = width * blockSliders.length + 'px';
-    blockSliders.forEach(slider => {
+// const init = (blockWidth, blockLine, blockSliders) => {
+//     // width = document.querySelector(`${blockWidth}`).offsetWidth;
+//     // console.log(width);
+//     width = blockWidth;
+//     // blockLine.style.width = width * blockSliders.length + 'px';
+//     blockLine.style.width = width * 3 + 'px';
+//     console.log(blockLine.style.width);
+//     blockSliders.forEach(slider => {
+//         slider.style.width = width + 'px';
+//         slider.style.height = 'auto';
+//     });
+//     // rollSlider();
+// }
+
+// window.addEventListener('resize', init);
+// init(400, sliderLineTariff, slidersTariff);
+// // init('.comments', sliderLineComment, slidersComment);
+
+// const rollSlider = (blockLine) => {
+//     blockLine.style.transform = 'translate(-' + index * width + 'px)';
+// }
+
+// const activeSlide = (n, blockSliders) => {
+//     blockSliders.forEach(slide => {
+//         slide.classList.remove('active');
+//     })
+//     blockSliders[n].classList.add('active');
+// }
+
+// const activeDot = (n, blockDots) => {
+//     blockDots.forEach(dot => {
+//         dot.classList.remove('active');
+//     })
+//     blockDots[n].classList.add('active');
+// }
+
+// const prepareCurrentSlide = (ind, blockSliders, blockLine, blockDots) => {
+//     activeSlide(ind, blockSliders);
+//     activeDot(ind, blockDots);
+//     rollSlider(blockLine);
+// }
+
+// dotsTraffic.forEach((dot, indexDot) => {
+//     dot.addEventListener('click', () => {
+//         index = indexDot;
+//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
+//     });
+// })
+
+
+
+
+
+// +====================================================
+
+// const init = () => {
+//     // width = document.querySelector('.tariff__item').offsetWidth;
+//     width = 400;
+//     sliderLineTariff.style.width = width * slidersTariff.length + 'px';
+//     console.log(sliderLineTariff.style.width);
+//     slidersTariff.forEach(slider => {
+//         slider.style.width = width + 'px';
+//         slider.style.height = 'auto';
+//     })
+// }
+
+// window.addEventListener('resize', init);
+// init();
+// const rollSlider = () => {
+//     sliderLineTariff.style.transform = 'translate(-' + index * width + 'px)';
+// }
+
+
+// const activeSlide = n => {
+//     slidersTariff.forEach(slide => {
+//         slide.classList.remove('active');
+//     })
+//     slidersTariff[n].classList.add('active');
+// }
+
+// const activeDot = n => {
+//     dotsTraffic.forEach(dot => {
+//         dot.classList.remove('active');
+//     })
+//     dotsTraffic[n].classList.add('active');
+// }
+
+// const prepareCurrentSlide = ind => {
+//     activeSlide(ind);
+//     activeDot(ind);
+// }
+
+// dotsTraffic.forEach((dot, indexDot) => {
+//     dot.addEventListener('click', () => {
+//         index = indexDot;
+//         rollSlider();
+//         prepareCurrentSlide(index);
+//     });
+// })
+
+
+
+// ================================================
+
+// const init = () => {
+//     // width = document.querySelector('.tariff__item').offsetWidth;
+//     width = 400;
+//     sliderLineTariff.style.width = width * slidersTariff.length + 'px';
+//     console.log(sliderLineTariff.style.width);
+//     slidersTariff.forEach(slider => {
+//         slider.style.width = width + 'px';
+//         slider.style.height = 'auto';
+//     })
+// }
+const init = () => {
+    width = document.querySelector('.comment__colum').offsetWidth;
+    console.log(width);
+    // width = document.querySelector('.comments').clientWidth;
+    // width = 400;
+    sliderLineComment.style.width = width * slidersComment.length + 'px';
+    console.log(sliderLineComment.style.width);
+    slidersComment.forEach(slider => {
         slider.style.width = width + 'px';
         slider.style.height = 'auto';
-    });
-    // rollSlider();
+    })
 }
+
 
 window.addEventListener('resize', init);
-init('.tariff__item', sliderLineTariff, slidersTariff);
-init('.comment__item', sliderLineComment, slidersComment);
-
-const rollSlider = (blockLine) => {
-    blockLine.style.transform = 'translate(-' + index * width + 'px)';
+init();
+const rollSlider = () => {
+    sliderLineComment.style.transform = 'translate(-' + index * width + 'px)';
 }
 
-const activeSlide = (n, blockSliders) => {
-    blockSliders.forEach(slide => {
+
+const activeSlide = n => {
+    slidersComment.forEach(slide => {
         slide.classList.remove('active');
     })
-    blockSliders[n].classList.add('active');
+    slidersComment[n].classList.add('active');
 }
 
-const activeDot = (n, blockDots) => {
-    blockDots.forEach(dot => {
+const activeDot = n => {
+    dotsComment.forEach(dot => {
         dot.classList.remove('active');
     })
-    blockDots[n].classList.add('active');
+    dotsComment[n].classList.add('active');
 }
 
-const prepareCurrentSlide = (ind, blockSliders, blockLine, blockDots) => {
-    activeSlide(ind, blockSliders);
-    activeDot(ind, blockDots);
-    rollSlider(blockLine);
+const prepareCurrentSlide = ind => {
+    activeSlide(ind);
+    activeDot(ind);
 }
-
-dotsTraffic.forEach((dot, indexDot) => {
-    dot.addEventListener('click', () => {
-        index = indexDot;
-        prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
-    });
-})
 
 dotsComment.forEach((dot, indexDot) => {
     dot.addEventListener('click', () => {
         index = indexDot;
-        prepareCurrentSlide(index, slidersComment, slidersComment, dotsComment);
+        rollSlider();
+        prepareCurrentSlide(index);
     });
 })
-
-// function dotsToggle(blockDots) {
-//     blockDots.forEach((dot, indexDot) => {
-//         dot.addEventListener('click', () => {
-//             index = indexDot;
-//             // prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dots);
-//             prepareCurrentSlide(ind, blockSliders, blockLine, blockDots);
-//         });
-//     })
-// }
-
-// dotsToggle(dots);
-
-
-// const nextSlide = () => {
-//     if (index == sliders.length - 1) {
-//         index = 0;
-//     } else {
-//         index++;
-//     }
-//     prepareCurrentSlide(index);
-// }
-
-// const prevSlide = () => {
-//     if (index == 0) {
-//         index = sliders.length - 1;
-//     } else {
-//         index--;
-//     }
-//     prepareCurrentSlide(index);
-// }
-
-// next.addEventListener('click', nextSlide);
-// prev.addEventListener('click', prevSlide);

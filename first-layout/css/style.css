@@ -949,7 +949,8 @@ body {
 }
 
 .comments {
-    margin: 52px -15px 0 15px;
+    margin: 52px -15px 0 -15px;
+    overflow: hidden;
 }
 
 .comments__line {
@@ -961,7 +962,7 @@ body {
 }
 
 .comment_colum {
-    padding: 0 15px;
+    padding: 0 15px 0 15px;
 }
 
 .comment__item {
@@ -975,23 +976,23 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 100%;
+    margin: 0 15px 0 15px;
+    width: 540px;
+}
+
+@media (max-width: 575px) {
+    .comment__item {
+        width: 318px;
+    }
 }
 
 .comment {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-width: 540px;
     text-align: center;
     -webkit-box-shadow: 0 10px 36px #c4c4c4;
     box-shadow: 0 10px 36px #c4c4c4;
     border-radius: 10px;
     padding: 32px 32px 56px;
+    height: 100%;
     position: relative;
 }
 
@@ -1005,6 +1006,7 @@ body {
     font-family: "GilroyRegular";
     font-size: 14px;
     line-height: 171.42857%;
+    max-height: 100%;
 }
 
 .comment:before {
@@ -1017,6 +1019,12 @@ body {
     left: 47.78%;
     right: 47.78%;
     top: 100.0%;
+}
+
+@media (max-width: 575px) {
+    .comment {
+        margin-right: 15px;
+    }
 }
 
 .client {
@@ -1078,6 +1086,14 @@ body {
     .clients__img-bg img {
         width: 54px;
         height: 46px;
+    }
+}
+
+@media (max-width: 575px) {
+    .clients__img-bg {
+        left: 100%;
+        top: -5%;
+        z-index: -1;
     }
 }
 
