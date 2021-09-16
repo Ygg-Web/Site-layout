@@ -672,6 +672,12 @@ body {
 .tariff__slider {
     width: 700px;
     border: 2px solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .tariff__colum {
@@ -778,7 +784,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
     .steps__inner .dots__wrapper--show {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -866,9 +872,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .step__item {
-        max-width: 214px;
-    }
     .step__item-position {
         margin: 0;
     }
@@ -900,7 +903,7 @@ body {
 
 .step__descr {
     text-align: center;
-    max-width: 270px;
+    width: 270px;
 }
 
 .step__descr .step__title {
