@@ -589,6 +589,7 @@
     
     .tariff__slider {
         width: 700px;
+        border: 2px solid;
     }
     
     .tariff__colum {
@@ -685,7 +686,7 @@
         }
     }
     
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
         .clients__inner {
             .dots__wrapper {
                 margin-top: 10px;
@@ -712,12 +713,20 @@
     .steps__items {
         margin-top: 56px;
         background: url(../img/steps/bg.svg) no-repeat top;
+        overflow: hidden;
     }
     
     .steps__line {
         display: flex;
         justify-content: space-around;
         transition: all ease 1s;
+    }
+    
+    .step__slider {
+        width: 700px;
+        border: 2px solid;
+        display: flex;
+        justify-content: center;
     }
     
     @media (max-width: 1200px) {
@@ -824,7 +833,7 @@
     
     @media (max-width: 767px) {
         .clients {
-            padding: 17px 0 50px 0;
+            padding: 37px 0 50px 0;
         }
     }
     
@@ -837,15 +846,22 @@
         overflow: hidden;
     }
     
+    @media (max-width: 767px) {
+        .comments {
+            margin: 32px -15px 0 -15px;
+        }
+    }
+    
     .comments__line {
         display: flex;
-        // justify-content: space-around;
         transition: all ease 1s;
     }
     
     .comment__slider {
         width: 700px;
         border: 2px solid;
+        display: flex;
+        justify-content: center;
     }
     
     @media (max-width: 575px) {
@@ -854,9 +870,7 @@
         }
     }
     
-    .comment_colum {
-        padding: 0 15px 0 15px;
-    }
+    .comment_colum {}
     
     .comment__item {
         display: flex;
@@ -877,18 +891,17 @@
         box-shadow: 0 10px 36px #c4c4c4;
         border-radius: 10px;
         padding: 32px 32px 56px;
-        height: 100%;
         position: relative;
         .comment__title {
             font-family: "GilroyBold";
             font-size: 18px;
             line-height: 28 / 18 * 100%;
+            min-height: 60px;
         }
         .comment__text {
             font-family: "GilroyRegular";
             font-size: 14px;
             line-height: 24 / 14 * 100%;
-            max-height: 100%;
             min-width: 476px;
         }
         &:before {
@@ -907,7 +920,6 @@
     @media (max-width: 575px) {
         .comment {
             padding: 32px 20px 46px 20px;
-            // margin-right: 15px;
             .comment__text {
                 min-width: 270px;
             }

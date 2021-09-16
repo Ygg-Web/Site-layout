@@ -144,10 +144,10 @@ let width;
 // ================================================
 
 const init = () => {
-    // width = document.querySelector('.comment__slider').offsetWidth;
+    width = document.querySelector('.comment__slider').offsetWidth;
     sliderLineComment.style.width = width * slidersComment.length + 'px';
     slidersComment.forEach(slider => {
-        // slider.style.width = document.querySelector('.comment__item').offsetWidth + 'px';
+        slider.style.width = document.querySelector('.comment__colum').offsetWidth + 'px';
         slider.style.height = 'auto';
     })
 }
@@ -186,3 +186,6 @@ dotsComment.forEach((dot, indexDot) => {
         prepareCurrentSlide(index);
     });
 })
+
+// ===возможно переверстать блоки с комментами
+// ===сделать слайдер под steps чтобы тестить функции из js
