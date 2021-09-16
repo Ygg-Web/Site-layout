@@ -127,6 +127,50 @@
         }
     }
     
+    .header__burger {
+        display: none;
+    }
+    
+    @media (max-width: 767px) {
+        .header__burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+        }
+        .header__burger span {
+            position: absolute;
+            background-color: #33AFE1;
+            width: 100%;
+            height: 2px;
+            top: 8px;
+        }
+        .header__burger::before,
+        .header__burger::after {
+            content: '';
+            background-color: $secondary-color;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+        }
+        .header__burger::before {
+            top: 0;
+        }
+        .header__burger::after {
+            background-color: #18E1F7;
+            top: 16px;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #E5E5E5;
+        }
+    }
+    
     // ==============================Секция 1
     .offer {
         padding: 95px 0 285px;
