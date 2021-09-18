@@ -96,12 +96,34 @@ body {
 }
 
 .header {
+    position: fixed;
     width: 100%;
     padding-top: 40px;
+    top: 0;
+    left: 0;
+    z-index: 50;
     background: rgba(242, 247, 255, 0.5);
 }
 
+@media (max-width: 767px) {
+    .header {
+        padding-top: 20px;
+    }
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #f2f7ff;
+}
+
 .header__inner {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -121,6 +143,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    z-index: 3;
 }
 
 .logo .logo__icon {
@@ -149,6 +172,8 @@ body {
 .nav {
     font-size: 20px;
     line-height: 118.18182%;
+    position: relative;
+    z-index: 2;
 }
 
 .nav .nav__item {
@@ -183,11 +208,15 @@ body {
 }
 
 @media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
     .header__burger {
         display: block;
         position: relative;
         width: 30px;
         height: 20px;
+        z-index: 3;
     }
     .header__burger span {
         position: absolute;
@@ -195,6 +224,8 @@ body {
         width: 100%;
         height: 2px;
         top: 8px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
     }
     .header__burger::before,
     .header__burger::after {
@@ -204,6 +235,8 @@ body {
         width: 100%;
         height: 2px;
         left: 0;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
     }
     .header__burger::before {
         top: 0;
@@ -212,43 +245,95 @@ body {
         background-color: #18E1F7;
         top: 16px;
     }
-    .nav {
+    .header__burger.active::before {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    .header__burger.active::after {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background-color: #685ed6;
+        top: 8px;
+    }
+    .header__burger.active span {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    .header__menu {
         position: fixed;
-        top: 0;
+        top: -100%;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #E5E5E5;
+        overflow: auto;
+        background: #f2f7ff;
+        padding: 90px 0 0 0;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    .header__menu.active {
+        top: 0;
+    }
+    .nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .nav button {
+        display: block;
+    }
+    .nav .btn-entrance,
+    .nav .btn-registration {
+        width: 177px;
+        margin: 0 0 11px 0;
+    }
+    .nav .btn-entrance:last-child,
+    .nav .btn-registration:last-child {
+        margin: 0;
+    }
+    .nav .nav__item {
+        margin: 0 0 24px 0;
+    }
+    .nav .nav__item:last-child {
+        margin: 0;
     }
 }
 
 .offer {
-    padding: 95px 0 285px;
+    padding: 187px 0 285px 0;
     max-width: 100%;
     background: rgba(242, 247, 255, 0.5);
 }
 
 @media (max-width: 1200px) {
     .offer {
-        padding: 65px 0 123px;
+        padding: 152px 0 123px;
     }
 }
 
 @media (max-width: 991px) {
     .offer {
-        padding: 45px 0 73px;
+        padding: 132px 0 73px;
     }
 }
 
 @media (max-width: 767px) {
     .offer {
-        padding: 45px 0 73px;
+        padding: 122px 0 73px;
     }
 }
 
 @media (max-width: 575px) {
     .offer {
-        padding: 45px 0 318px;
+        padding: 112px 0 318px;
     }
 }
 
@@ -279,14 +364,12 @@ body {
 @media (max-width: 992px) {
     .offer-slogan {
         max-width: 270px;
-        padding: 0;
     }
 }
 
 @media (max-width: 575px) {
     .offer-slogan {
         max-width: 100%;
-        padding: 0;
     }
 }
 
@@ -715,7 +798,6 @@ body {
 
 .tariff__slider {
     width: 700px;
-    border: 2px solid;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -882,7 +964,6 @@ body {
 
 .step__slider {
     width: 700px;
-    border: 2px solid;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1033,7 +1114,6 @@ body {
 
 .comment__slider {
     width: 700px;
-    border: 2px solid;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

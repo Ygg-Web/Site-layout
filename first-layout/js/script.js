@@ -110,3 +110,12 @@ dotsStep.forEach((dot, indexDot) => {
 })
 
 // =============================================================================
+
+const headerBurger = document.querySelector('.header__burger'),
+    headerMenu = document.querySelector('.header__menu');
+
+headerBurger.addEventListener('click', () => {
+    headerBurger.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+    document.querySelector('body').classList.toggle('lock');
+})
