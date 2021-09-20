@@ -31,40 +31,29 @@ closeWindow(modalRegistration);
 // ==Slider=================================================================
 const
     slidersTariff = document.querySelectorAll('.tariff__item'),
+    sliderTariff = document.querySelector('.tariff__item'),
     sliderLineTariff = document.querySelector('.tariffs__line'),
-    sliderBlockWidthTariff = document.querySelector('.tariff__slider'),
-    sliderColumWidthTariff = document.querySelector('.tariff__colum'),
     dotsTraffic = document.querySelectorAll('.dot-tariff'),
-
     slidersComment = document.querySelectorAll('.comment__item'),
+    sliderComment = document.querySelector('.comment__item'),
     sliderLineComment = document.querySelector('.comments__line'),
-    sliderBlockWidthComment = document.querySelector('.comment__slider'),
-    sliderColumWidthComment = document.querySelector('.comment__colum'),
     dotsComment = document.querySelectorAll('.dot-comment'),
-
     slidersStep = document.querySelectorAll('.step__item'),
+    sliderStep = document.querySelector('.step__item'),
     sliderLineStep = document.querySelector('.steps__line'),
-    sliderBlockWidthStep = document.querySelector('.step__slider'),
-    sliderColumWidthStep = document.querySelector('.step__colum'),
     dotsStep = document.querySelectorAll('.dot-step');
 
 let index = 0;
 let width;
 
-const init = (blockWidthSlider, blockLine, blockSliders, blockColumWidth) => {
-    width = blockWidthSlider.offsetWidth;
-    blockLine.style.width = width * blockSliders.length + 'px';
+const init = (itemSlider, blockSliders) => {
+    width = itemSlider.offsetWidth;
     blockSliders.forEach(slider => {
-        slider.style.width = blockColumWidth.offsetWidth + 'px';
+        slider.style.width = width + 'px';
         slider.style.height = 'auto';
     });
     // rollSlider();
 }
-
-// window.addEventListener('resize', init);
-init(sliderBlockWidthTariff, sliderLineTariff, slidersTariff, sliderColumWidthTariff);
-init(sliderBlockWidthComment, sliderLineComment, slidersComment, sliderColumWidthComment);
-init(sliderBlockWidthStep, sliderLineStep, slidersStep, sliderColumWidthStep);
 
 const rollSlider = (blockLine) => {
     blockLine.style.transform = 'translate(-' + index * width + 'px)';
@@ -90,26 +79,21 @@ const prepareCurrentSlide = (ind, blockSliders, blockLine, blockDots) => {
     rollSlider(blockLine);
 }
 
-dotsTraffic.forEach((dot, indexDot) => {
-    dot.addEventListener('click', () => {
-        index = indexDot;
-        prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
-    });
-})
 
-dotsComment.forEach((dot, indexDot) => {
-    dot.addEventListener('click', () => {
-        index = indexDot;
-        prepareCurrentSlide(index, slidersComment, sliderLineComment, dotsComment);
-    });
-})
+function dotsToggle(itemSlider, blockSliders, blockLine, blockDots) {
+    blockDots.forEach((dot, indexDot) => {
+        dot.addEventListener('click', () => {
+            index = indexDot;
+            init(itemSlider, blockSliders);
+            prepareCurrentSlide(index, blockSliders, blockLine, blockDots);
+        });
+    })
+}
 
-dotsStep.forEach((dot, indexDot) => {
-    dot.addEventListener('click', () => {
-        index = indexDot;
-        prepareCurrentSlide(index, slidersStep, sliderLineStep, dotsStep);
-    });
-})
+dotsToggle(sliderTariff, slidersTariff, sliderLineTariff, dotsTraffic);
+dotsToggle(sliderStep, slidersStep, sliderLineStep, dotsStep);
+dotsToggle(sliderComment, slidersComment, sliderLineComment, dotsComment);
+
 
 // =============================================================================
 
