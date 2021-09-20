@@ -354,6 +354,7 @@
         font-family: 'GilroyBold';
         font-size: 18px;
         line-height: 24 / 18 * 100%;
+        text-align: center;
         display: inline-block;
         vertical-align: top;
         padding: 12px 32px;
@@ -375,6 +376,9 @@
             height: 48px;
             display: block;
             margin: 56px 0;
+        }
+        &--link {
+            width: 287px;
         }
         &:hover {
             background-color: #f1e4ff;
@@ -619,16 +623,11 @@
         }
     }
     
-    .tariff__inner {
-        display: flex;
-        flex-direction: column;
-    }
-    
     .title {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: center; //проверить !!!!!!!!!!!!
         .title__info {
             font-family: "GilroyBlack";
             font-size: 40px;
@@ -700,27 +699,24 @@
     
     .tariffs__line {
         display: flex;
+        justify-content: space-around;
         transition: all ease 1s;
     }
     
-    .tariff__slider {
-        width: 700px;
-        // border: 2px solid;
-        display: flex;
-        justify-content: center;
+    @media (max-width: 1200px) {
+        .tariffs__line {
+            justify-content: flex-start;
+        }
     }
     
-    .tariff__colum {
-        padding: 0 33px;
-    }
-    
-    .tariff__item {
+    .tariff__content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         max-width: 350px;
         padding: 7px 0 50px 0;
+        margin: 15px;
         background: #FCFEFF;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
         border-radius: 6px;
@@ -750,8 +746,11 @@
     }
     
     @media (max-width: 1200px) {
-        .tariff__item {
+        .tariff__content {
             max-width: 330px;
+            .btn {
+                width: 270px;
+            }
             .tariff__type {
                 min-width: 330px;
             }
@@ -1021,6 +1020,7 @@
         border-radius: 10px;
         padding: 32px 32px 56px;
         position: relative;
+        background: #fff;
         .comment__title {
             font-family: "GilroyBold";
             font-size: 18px;
