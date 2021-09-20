@@ -35,11 +35,13 @@ const
     sliderBlockWidthTariff = document.querySelector('.tariff__slider'),
     sliderColumWidthTariff = document.querySelector('.tariff__colum'),
     dotsTraffic = document.querySelectorAll('.dot-tariff'),
+
     slidersComment = document.querySelectorAll('.comment__item'),
     sliderLineComment = document.querySelector('.comments__line'),
     sliderBlockWidthComment = document.querySelector('.comment__slider'),
     sliderColumWidthComment = document.querySelector('.comment__colum'),
     dotsComment = document.querySelectorAll('.dot-comment'),
+
     slidersStep = document.querySelectorAll('.step__item'),
     sliderLineStep = document.querySelector('.steps__line'),
     sliderBlockWidthStep = document.querySelector('.step__slider'),
