@@ -1456,7 +1456,7 @@
     }
     
     .modal__input {
-        width: 100%;
+        min-width: 100%;
         height: 40px;
         padding: 16px 20px;
         margin: 10px 0;
@@ -1468,22 +1468,25 @@
         font-family: "GilroyRegular";
     }
     
-    .password {
+    .password__box {
         position: relative;
     }
     
     .password-control {
         position: absolute;
-        bottom: 25%;
+        bottom: 40%;
         right: 5%;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
+        display: block;
+        width: 22px;
+        height: 12px;
         background: url(../img/modal/no-view.svg) 0 0 no-repeat;
     }
     
     .password-control.view {
-        background: url(/no-view.svg) 0 0 no-repeat;
+        bottom: 35%;
+        width: 22px;
+        height: 20px;
+        background: url(../img/modal/view.svg) 0 0 no-repeat;
     }
     
     .show {

@@ -105,3 +105,33 @@ headerBurger.addEventListener('click', () => {
     headerMenu.classList.toggle('active');
     document.querySelector('body').classList.toggle('lock');
 })
+
+// =============================================================================
+const password = document.querySelectorAll('.password'),
+    toggle = document.querySelectorAll('.password-control');
+
+const checkPasswd = () => {
+    password.forEach(item => {
+        if (item.type === 'password') {
+            item.setAttribute('type', 'text');
+            document.querySelector('.password-control').classList.add('view')
+        } else {
+            item.setAttribute('type', 'password');
+            document.querySelector('.password-control').classList.remove('view')
+        }
+    })
+}
+
+const checkImgPasswd = () => {
+    toggle.forEach(item => {
+        item.classList.toggle('view')
+    })
+}
+
+toggle.forEach(item => {
+    item.addEventListener('click', () => {
+        checkImgPasswd();
+        checkPasswd();
+    })
+
+})
