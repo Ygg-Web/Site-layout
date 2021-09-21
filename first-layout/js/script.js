@@ -95,6 +95,72 @@ dotsToggle(sliderStep, slidersStep, sliderLineStep, dotsStep);
 dotsToggle(sliderComment, slidersComment, sliderLineComment, dotsComment);
 
 
+// const nextSlide = () => {
+//     if (index == slidersTariff.length - 1) {
+//         index = 0;
+//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
+//         rollSlider();
+//     } else {
+//         index++;
+//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
+//         rollSlider();
+//     }
+// }
+
+// const prevSlide = () => {
+//     if (index == 0) {
+//         index = slidersTariff.length - 1;
+//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
+//     } else {
+//         index--;
+//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
+//     }
+// }
+
+
+// let x1 = null,
+//     y1 = null;
+
+// const handleTouchStart = (event) => {
+//     const touch = event.touches[0];
+//     x1 = touch.clientX;
+//     y1 = touch.clientY;
+// }
+
+
+// const handleTouchMove = (event) => {
+//     if (!x1 || !y1) {
+//         return false;
+//     }
+//     let x2 = event.touches[0].clientX;
+//     let y2 = event.touches[0].clientY;
+
+//     let xDiff = x2 - x1;
+//     let yDiff = y2 - y1;
+//     if (Math.abs(xDiff) > Math.abs(yDiff)) {
+//         if (xDiff > 0) {
+//             nextSlide();
+//         } else {
+//             prevSlide();
+//         }
+//     }
+
+
+//     x1 = null;
+//     y1 = null;
+// }
+
+
+// slidersTariff.forEach(slider => {
+//     slider.addEventListener('touchstart', handleTouchStart);
+//     slider.addEventListener('touchmove', handleTouchMove);
+// })
+
+
+
+
+
+
 // =============================================================================
 
 const headerBurger = document.querySelector('.header__burger'),
