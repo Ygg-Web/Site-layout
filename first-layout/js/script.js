@@ -114,10 +114,8 @@ const checkPasswd = () => {
     password.forEach(item => {
         if (item.type === 'password') {
             item.setAttribute('type', 'text');
-            document.querySelector('.password-control').classList.add('view')
         } else {
             item.setAttribute('type', 'password');
-            document.querySelector('.password-control').classList.remove('view')
         }
     })
 }
