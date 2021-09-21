@@ -98,7 +98,7 @@ body {
 .header {
     position: fixed;
     width: 100%;
-    padding-top: 40px;
+    padding: 40px 0 15px 0;
     top: 0;
     left: 0;
     z-index: 50;
@@ -107,7 +107,7 @@ body {
 
 @media (max-width: 767px) {
     .header {
-        padding-top: 20px;
+        padding: 20px 0 0 0;
     }
 }
 
@@ -149,9 +149,20 @@ body {
 .logo .logo__icon {
     width: 55px;
     height: 39.63px;
+    padding: 0 0 3px 0;
 }
 
 .logo .logo__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-family: 'GilroyBold';
     font-size: 32px;
     line-height: 65.625%;
@@ -1081,6 +1092,7 @@ body {
         margin: 42px 0 0 0;
     }
     .step__img img {
+        border-radius: 36px;
         width: 210px;
         height: 421px;
     }
@@ -1091,6 +1103,7 @@ body {
         padding: 0 10px;
     }
     .step__img img {
+        border-radius: 34px;
         width: 202px;
         height: 417px;
     }
