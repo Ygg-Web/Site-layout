@@ -1069,6 +1069,10 @@ body {
     margin: 26px 0 0 0;
 }
 
+.step__img img {
+    border-radius: 39px;
+}
+
 @media (max-width: 1200px) {
     .step__img {
         margin: 42px 0 0 0;
@@ -1267,6 +1271,9 @@ body {
 }
 
 @media (max-width: 767px) {
+    .clients__img-bg {
+        border-radius: 50px;
+    }
     .clients__img-bg img {
         width: 54px;
         height: 46px;
@@ -1605,6 +1612,12 @@ input[type="submit"] {
     }
 }
 
+@media (max-width: 575px) {
+    .modal__dialog {
+        max-width: 320px;
+    }
+}
+
 .modal__content {
     position: relative;
     max-width: 480px;
@@ -1625,6 +1638,16 @@ input[type="submit"] {
     .modal__content .btn {
         margin: 26px 0 0 0;
         width: 240px;
+    }
+}
+
+@media (max-width: 575px) {
+    .modal__content {
+        max-width: 320px;
+        padding: 40px 30px 30px;
+    }
+    .modal__content .btn {
+        width: 260px;
     }
 }
 

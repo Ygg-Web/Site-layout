@@ -928,6 +928,9 @@
         &-sml {
             margin: 26px 0 0 0;
         }
+        img {
+            border-radius: 39px;
+        }
     }
     
     @media (max-width: 1200px) {
@@ -1099,6 +1102,7 @@
     
     @media (max-width: 767px) {
         .clients__img-bg {
+            border-radius: 50px;
             img {
                 width: 54px;
                 height: 46px;
@@ -1416,6 +1420,12 @@
         }
     }
     
+    @media (max-width: 575px) {
+        .modal__dialog {
+            max-width: 320px;
+        }
+    }
+    
     .modal__content {
         position: relative;
         max-width: 480px;
@@ -1435,6 +1445,16 @@
             .btn {
                 margin: 26px 0 0 0;
                 width: 240px;
+            }
+        }
+    }
+    
+    @media (max-width: 575px) {
+        .modal__content {
+            max-width: 320px;
+            padding: 40px 30px 30px;
+            .btn {
+                width: 260px;
             }
         }
     }
