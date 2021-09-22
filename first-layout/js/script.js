@@ -152,12 +152,6 @@ const handleTouchEnd = (event, itemSlider, blockSliders, blockLine, blockDots) =
     y1 = null;
 }
 
-// slidersTariff.forEach(slider => {
-//     slider.addEventListener('touchstart', handleTouchStart);
-//     slider.addEventListener('touchend', () => handleTouchEnd(event, sliderTariff, slidersTariff, sliderLineTariff, dotsTraffic));
-// })
-
-
 function touchSwipe(itemSlider, blockSliders, blockLine, blockDots) {
     blockSliders.forEach(slider => {
         slider.addEventListener('touchstart', handleTouchStart);
