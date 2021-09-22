@@ -95,66 +95,79 @@ dotsToggle(sliderStep, slidersStep, sliderLineStep, dotsStep);
 dotsToggle(sliderComment, slidersComment, sliderLineComment, dotsComment);
 
 
-// const nextSlide = () => {
-//     if (index == slidersTariff.length - 1) {
-//         index = 0;
-//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
-//         rollSlider();
-//     } else {
-//         index++;
-//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
-//         rollSlider();
-//     }
-// }
+const nextSlide = (itemSlider, blockSliders, blockLine, blockDots) => {
+    if (index == blockSliders.length - 1) {
+        index = 0;
+        init(itemSlider, blockSliders);
+        prepareCurrentSlide(index, blockSliders, blockLine, blockDots);
+    } else {
+        index++;
+        init(itemSlider, blockSliders);
+        prepareCurrentSlide(index, blockSliders, blockLine, blockDots);
+    }
+}
 
-// const prevSlide = () => {
-//     if (index == 0) {
-//         index = slidersTariff.length - 1;
-//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
-//     } else {
-//         index--;
-//         prepareCurrentSlide(index, slidersTariff, sliderLineTariff, dotsTraffic);
-//     }
-// }
+const prevSlide = (itemSlider, blockSliders, blockLine, blockDots) => {
+    if (index == 0) {
+        index = slidersTariff.length - 1;
+        init(itemSlider, blockSliders);
+        prepareCurrentSlide(index, blockSliders, blockLine, blockDots);
+    } else {
+        index--;
+        init(itemSlider, blockSliders);
+        prepareCurrentSlide(index, blockSliders, blockLine, blockDots);
+    }
+}
 
+let x1 = null,
+    y1 = null;
 
-// let x1 = null,
-//     y1 = null;
+const handleTouchStart = (event) => {
+    event.preventDefault();
+    const touch = event.changedTouches[0];
+    x1 = touch.pageX;
+    y1 = touch.pageY;
+}
 
-// const handleTouchStart = (event) => {
-//     const touch = event.touches[0];
-//     x1 = touch.clientX;
-//     y1 = touch.clientY;
-// }
+const handleTouchEnd = (event, itemSlider, blockSliders, blockLine, blockDots) => {
+    event.preventDefault();
+    if (!x1 || !y1) {
+        return false;
+    }
 
+    let x2 = event.changedTouches[0].pageX;
+    let y2 = event.changedTouches[0].pageY;
 
-// const handleTouchMove = (event) => {
-//     if (!x1 || !y1) {
-//         return false;
-//     }
-//     let x2 = event.touches[0].clientX;
-//     let y2 = event.touches[0].clientY;
+    let xDiff = x2 - x1;
+    let yDiff = y2 - y1;
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff > 0) {
+            prevSlide(itemSlider, blockSliders, blockLine, blockDots);
+        } else {
+            nextSlide(itemSlider, blockSliders, blockLine, blockDots);
+        }
+    }
 
-//     let xDiff = x2 - x1;
-//     let yDiff = y2 - y1;
-//     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-//         if (xDiff > 0) {
-//             nextSlide();
-//         } else {
-//             prevSlide();
-//         }
-//     }
-
-
-//     x1 = null;
-//     y1 = null;
-// }
-
+    x1 = null;
+    y1 = null;
+}
 
 // slidersTariff.forEach(slider => {
 //     slider.addEventListener('touchstart', handleTouchStart);
-//     slider.addEventListener('touchmove', handleTouchMove);
+//     slider.addEventListener('touchend', () => handleTouchEnd(event, sliderTariff, slidersTariff, sliderLineTariff, dotsTraffic));
 // })
+
+
+function touchSwipe(itemSlider, blockSliders, blockLine, blockDots) {
+    blockSliders.forEach(slider => {
+        slider.addEventListener('touchstart', handleTouchStart);
+        slider.addEventListener('touchend', () => handleTouchEnd(event, itemSlider, blockSliders, blockLine, blockDots));
+    })
+}
+
+touchSwipe(sliderTariff, slidersTariff, sliderLineTariff, dotsTraffic);
+touchSwipe(sliderStep, slidersStep, sliderLineStep, dotsStep);
+touchSwipe(sliderComment, slidersComment, sliderLineComment, dotsComment);
 
 
 
