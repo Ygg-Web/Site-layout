@@ -146,10 +146,10 @@ body {
     z-index: 3;
 }
 
-.logo .logo__icon {
-    width: 55px;
-    height: 39.63px;
-    padding: 0 0 3px 0;
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
 }
 
 .logo .logo__title {
@@ -1494,6 +1494,9 @@ input[type="submit"] {
 .logo__body .logo__icon {
     width: 81px;
     height: 59px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    padding: 0 3px 6px 0;
 }
 
 .logo__body .logo__title {
