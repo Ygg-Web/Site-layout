@@ -48,6 +48,7 @@ new Swiper('.tariffs', {
         }
     },
 });
+
 new Swiper('.comments', {
     pagination: {
         el: '.swiper-pagination',
@@ -68,6 +69,31 @@ new Swiper('.comments', {
         }
     },
 });
+
+new Swiper('.steps__items', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.3,
+        },
+        575: {
+            slidesPerView: 2.3,
+        },
+        767: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 3,
+        }
+    },
+});
+
 
 
 // ==Slider=================================================================

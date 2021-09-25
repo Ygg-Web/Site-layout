@@ -632,7 +632,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center; //проверить !!!!!!!!!!!!
+        text-align: center;
         .title__info {
             font-family: "GilroyBlack";
             font-size: 40px;
@@ -702,23 +702,14 @@
         }
     }
     
-    // .tariffs__line {
-    //     display: flex;
-    //     justify-content: space-around;
-    //     transition: all ease 1s;
-    // }
-    // @media (max-width: 1200px) {
-    //     .tariffs__line {
-    //         justify-content: flex-start;
-    //     }
-    // }
     .tariffs .swiper-pagination {
         position: absolute;
         bottom: -10%;
     }
     
     .tariffs .swiper-pagination-bullet,
-    .comments .swiper-pagination-bullet {
+    .comments .swiper-pagination-bullet,
+    .steps__items .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
         border: 2px solid #685ED6;
@@ -731,17 +722,6 @@
         }
     }
     
-    .swiper-wrapper {
-        display: flex;
-        // justify-content: space-around;
-        // border: 2px solid black;
-    }
-    
-    // @media (max-width: 1200px) {
-    //     .swiper-wrapper {
-    //         justify-content: flex-start;
-    //     }
-    // }
     .swiper-slide {
         display: flex;
         justify-content: center;
@@ -799,6 +779,7 @@
     .steps {
         padding: 100px 0 121px 0;
         max-width: 100%;
+        position: relative;
     }
     
     @media (max-width: 992px) {
@@ -820,16 +801,14 @@
         }
     }
     
-    .steps__line {
-        display: flex;
-        justify-content: space-around;
-        transition: all ease 1s;
+    .steps__items .swiper-pagination {
+        position: absolute;
+        bottom: 0%;
     }
     
-    @media (max-width: 767px) {
-        .steps__line {
-            justify-content: flex-start;
-        }
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
     }
     
     .step__item {
@@ -888,6 +867,7 @@
             font-family: "GilroyRegular";
             font-size: 16px;
             line-height: 26 / 16 * 100%;
+            height: 80px;
         }
     }
     
@@ -973,33 +953,11 @@
         }
     }
     
-    // .comments__line {
-    //     display: flex;
-    //     justify-content: space-around;
-    //     transition: all ease 1s;
-    // }
-    // @media (max-width: 1200px) {
-    //     .comments__line {
-    //         justify-content: flex-start;
-    //     }
-    // }
     .comments .swiper-pagination {
         position: absolute;
         bottom: -5%;
     }
     
-    // .comments .swiper-pagination-bullet {
-    //     width: 10px;
-    //     height: 10px;
-    //     border: 2px solid #685ED6;
-    //     border-radius: 50%;
-    //     cursor: pointer;
-    //     background: transparent;
-    //     opacity: 1;
-    //     &-active {
-    //         background-color: #685ED6;
-    //     }
-    // }
     .comment__item {
         display: flex;
         flex-direction: column;
@@ -1266,7 +1224,8 @@
             height: 44px;
         }
         input[type="submit"] {
-            height: 44px;
+            transform: translate(-3%);
+            height: 46px;
         }
     }
     
