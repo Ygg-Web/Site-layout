@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Tocha</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -106,9 +107,9 @@
                         <h2 class="title__info">Тарифы</h2>
                         <p class="title__text">Стоимость зависит от трафика сайта</p>
                     </div>
-                    <div class="tariffs">
-                        <div class="tariffs__line">
-                            <div class="tariff__item">
+                    <div class="tariffs swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="tariff__item swiper-slide">
                                 <div class="tariff__content">
                                     <p class="tariff__type">Бесплатно</p>
                                     <p class="tariff__info">Пробный период на 1 месяц</p>
@@ -116,7 +117,7 @@
                                     <a class="btn btn--link" href="#"> Подключить за 0₽</a>
                                 </div>
                             </div>
-                            <div class="tariff__item">
+                            <div class="tariff__item swiper-slide">
                                 <div class="tariff__content">
                                     <p class="tariff__type">Базовый</p>
                                     <p class="tariff__info">Менее 1000 посещений в сутки</p>
@@ -124,7 +125,7 @@
                                     <a class="btn btn--link" href="#"> Подключить за 200₽</a>
                                 </div>
                             </div>
-                            <div class="tariff__item">
+                            <div class="tariff__item swiper-slide">
                                 <div class="tariff__content">
                                     <p class="tariff__type">Премиум</p>
                                     <p class="tariff__info">Более 1000 посещений в сутки</p>
@@ -133,13 +134,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
 
-                    <div class="dots__wrapper dots__wrapper--show">
+                    <!-- <div class="dots__wrapper dots__wrapper--show">
                         <span class="dot dot-tariff active"></span>
                         <span class="dot dot-tariff"></span>
                         <span class="dot dot-tariff"></span>
-                    </div>
+                    </div> -->
 
                 </div>
             </section>
@@ -184,11 +186,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dots__wrapper dots__wrapper--show">
+                    <!-- <div class="dots__wrapper dots__wrapper--show">
                         <span class="dot dot-step active"></span>
                         <span class="dot dot-step"></span>
                         <span class="dot dot-step"></span>
-                    </div>
+                    </div> -->
                 </div>
             </section>
             <!-- Section 4 -->
@@ -199,9 +201,9 @@
                     <div class="title">
                         <h2 class="title__info">Отзывы клиентов</h2>
                     </div>
-                    <div class="comments">
-                        <div class="comments__line">
-                            <div class="comment__item active">
+                    <div class="comments swiper-container">
+                        <div class="comments__line swiper-wrapper">
+                            <div class="comment__item swiper-slide">
                                 <div class="comment">
                                     <h5 class="comment__title">Как же удобно!</h5>
                                     <p class="comment__text">В рамках спецификации современных стандарто, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической
@@ -218,7 +220,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comment__item">
+                            <div class="comment__item swiper-slide">
                                 <div class="comment">
                                     <h5 class="comment__title">Теперь мы идем в ногу со временем</h5>
                                     <p class="comment__text">А еще интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.
@@ -235,11 +237,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="dots__wrapper dots__wrapper--show">
+                    <!-- <div class="dots__wrapper dots__wrapper--show">
                         <span class="dot dot-comment active"></span>
                         <span class="dot dot-comment"></span>
-                    </div>
+                    </div> -->
                     <div class="clients__img-bg">
                         <img src="./img/clients/“.svg" alt="bg">
                     </div>
@@ -346,6 +349,7 @@
             </div>
         </div>
         <!-- Modal -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
     </div>
 </body>

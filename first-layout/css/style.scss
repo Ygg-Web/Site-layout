@@ -613,6 +613,7 @@
     .tariff {
         padding-top: 100px;
         max-width: 100%;
+        position: relative;
     }
     
     @media (max-width: 1200px) {
@@ -701,16 +702,49 @@
         }
     }
     
-    .tariffs__line {
-        display: flex;
-        justify-content: space-around;
-        transition: all ease 1s;
+    // .tariffs__line {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     transition: all ease 1s;
+    // }
+    // @media (max-width: 1200px) {
+    //     .tariffs__line {
+    //         justify-content: flex-start;
+    //     }
+    // }
+    .tariffs .swiper-pagination {
+        position: absolute;
+        bottom: -10%;
     }
     
-    @media (max-width: 1200px) {
-        .tariffs__line {
-            justify-content: flex-start;
+    .tariffs .swiper-pagination-bullet,
+    .comments .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border: 2px solid #685ED6;
+        border-radius: 50%;
+        cursor: pointer;
+        background: transparent;
+        opacity: 1;
+        &-active {
+            background-color: #685ED6;
         }
+    }
+    
+    .swiper-wrapper {
+        display: flex;
+        // justify-content: space-around;
+        // border: 2px solid black;
+    }
+    
+    // @media (max-width: 1200px) {
+    //     .swiper-wrapper {
+    //         justify-content: flex-start;
+    //     }
+    // }
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
     }
     
     .tariff__content {
@@ -719,8 +753,8 @@
         align-items: center;
         justify-content: space-around;
         max-width: 350px;
-        padding: 7px 0 50px 0;
-        margin: 15px;
+        padding: 0 0 50px 0;
+        margin: 15px 15px 30px 15px;
         background: #FCFEFF;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
         border-radius: 6px;
@@ -761,64 +795,60 @@
         }
     }
     
-    .dots__wrapper {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-        transition: background-color 0.6s ease;
-        span {
-            width: 10px;
-            height: 10px;
-            border: 2px solid #685ED6;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        span:last-child {
-            margin-right: 0;
-        }
-        .dot.active {
-            background: #685ED6;
-        }
-        &--show {
-            display: none;
-        }
-    }
-    
-    @media (max-width: 1200px) {
-        .tariff__inner {
-            .dots__wrapper {
-                &--show {
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .steps__inner {
-            .dots__wrapper {
-                &--show {
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-        }
-    }
-    
-    @media (max-width: 1200px) {
-        .clients__inner {
-            .dots__wrapper {
-                margin-top: 10px;
-                &--show {
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-        }
-    }
-    
+    // .dots__wrapper {
+    //     display: flex;
+    //     justify-content: center;
+    //     margin-top: 50px;
+    //     transition: background-color 0.6s ease;
+    //     span {
+    //         width: 10px;
+    //         height: 10px;
+    //         border: 2px solid #685ED6;
+    //         border-radius: 50%;
+    //         margin: 0 5px;
+    //         cursor: pointer;
+    //     }
+    //     span:last-child {
+    //         margin-right: 0;
+    //     }
+    //     .dot.active {
+    //         background: #685ED6;
+    //     }
+    //     &--show {
+    //         display: none;
+    //     }
+    // }
+    // @media (max-width: 1200px) {
+    //     .tariff__inner {
+    //         .dots__wrapper {
+    //             &--show {
+    //                 display: flex;
+    //                 justify-content: center;
+    //             }
+    //         }
+    //     }
+    // }
+    // @media (max-width: 767px) {
+    //     .steps__inner {
+    //         .dots__wrapper {
+    //             &--show {
+    //                 display: flex;
+    //                 justify-content: center;
+    //             }
+    //         }
+    //     }
+    // }
+    // @media (max-width: 1200px) {
+    //     .clients__inner {
+    //         .dots__wrapper {
+    //             margin-top: 10px;
+    //             &--show {
+    //                 display: flex;
+    //                 justify-content: center;
+    //             }
+    //         }
+    //     }
+    // }
     // =============================Секция 4
     .steps {
         padding: 100px 0 121px 0;
@@ -996,16 +1026,42 @@
         }
     }
     
-    .comments__line {
-        display: flex;
-        justify-content: space-around;
-        transition: all ease 1s;
+    // .comments__line {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     transition: all ease 1s;
+    // }
+    // @media (max-width: 1200px) {
+    //     .comments__line {
+    //         justify-content: flex-start;
+    //     }
+    // }
+    .comments .swiper-pagination {
+        position: absolute;
+        bottom: -10%;
     }
     
-    @media (max-width: 1200px) {
-        .comments__line {
-            justify-content: flex-start;
-        }
+    // .comments .swiper-pagination-bullet {
+    //     width: 10px;
+    //     height: 10px;
+    //     border: 2px solid #685ED6;
+    //     border-radius: 50%;
+    //     cursor: pointer;
+    //     background: transparent;
+    //     opacity: 1;
+    //     &-active {
+    //         background-color: #685ED6;
+    //     }
+    // }
+    .swiper-wrapper {
+        display: flex;
+        // justify-content: space-around;
+        // border: 2px solid black;
+    }
+    
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
     }
     
     .comment__item {
