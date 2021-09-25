@@ -58,13 +58,13 @@ new Swiper('.comments', {
             slidesPerView: 1,
         },
         767: {
-            slidesPerView: 2,
+            slidesPerView: 1.3,
         },
         992: {
-            slidesPerView: 2,
+            slidesPerView: 1.7,
         },
         1200: {
-            slidesPerView: 3,
+            slidesPerView: 2,
         }
     },
 });

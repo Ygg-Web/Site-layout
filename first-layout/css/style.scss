@@ -795,60 +795,6 @@
         }
     }
     
-    // .dots__wrapper {
-    //     display: flex;
-    //     justify-content: center;
-    //     margin-top: 50px;
-    //     transition: background-color 0.6s ease;
-    //     span {
-    //         width: 10px;
-    //         height: 10px;
-    //         border: 2px solid #685ED6;
-    //         border-radius: 50%;
-    //         margin: 0 5px;
-    //         cursor: pointer;
-    //     }
-    //     span:last-child {
-    //         margin-right: 0;
-    //     }
-    //     .dot.active {
-    //         background: #685ED6;
-    //     }
-    //     &--show {
-    //         display: none;
-    //     }
-    // }
-    // @media (max-width: 1200px) {
-    //     .tariff__inner {
-    //         .dots__wrapper {
-    //             &--show {
-    //                 display: flex;
-    //                 justify-content: center;
-    //             }
-    //         }
-    //     }
-    // }
-    // @media (max-width: 767px) {
-    //     .steps__inner {
-    //         .dots__wrapper {
-    //             &--show {
-    //                 display: flex;
-    //                 justify-content: center;
-    //             }
-    //         }
-    //     }
-    // }
-    // @media (max-width: 1200px) {
-    //     .clients__inner {
-    //         .dots__wrapper {
-    //             margin-top: 10px;
-    //             &--show {
-    //                 display: flex;
-    //                 justify-content: center;
-    //             }
-    //         }
-    //     }
-    // }
     // =============================Секция 4
     .steps {
         padding: 100px 0 121px 0;
@@ -997,6 +943,7 @@
         padding: 17px 0 80px 0;
         max-width: 100%;
         background: rgba(242, 247, 255, 0.5);
+        position: relative;
     }
     
     @media (max-width: 1200px) {
@@ -1038,7 +985,7 @@
     // }
     .comments .swiper-pagination {
         position: absolute;
-        bottom: -10%;
+        bottom: -5%;
     }
     
     // .comments .swiper-pagination-bullet {
@@ -1053,17 +1000,6 @@
     //         background-color: #685ED6;
     //     }
     // }
-    .swiper-wrapper {
-        display: flex;
-        // justify-content: space-around;
-        // border: 2px solid black;
-    }
-    
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-    }
-    
     .comment__item {
         display: flex;
         flex-direction: column;
@@ -1075,7 +1011,7 @@
     @media (max-width: 575px) {
         .comment__item {
             margin: 30px 10px 0 2px;
-            min-width: 318px;
+            min-width: 328px;
         }
     }
     
